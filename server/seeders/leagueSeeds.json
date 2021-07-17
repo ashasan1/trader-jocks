@@ -1,0 +1,12 @@
+[
+  {
+    "leagueInitials": "NFL",
+    "leagueName": "National Football League",
+    "leagueLogo": "_NFL_Logo.png"
+  },
+  {
+    "leagueInitials": "NBA",
+    "leagueName": "National Basketball Association",
+    "leagueLogo": "_NBA_Logo.png"
+  }
+]
