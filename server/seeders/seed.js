@@ -1,6 +1,6 @@
 const db = require('../config/connection');
 const { League } = require('../models');
-const leagueSeeds = require('./leaugeSeeds.json');
+const leagueSeeds = require('./leagueSeeds.json');
 
 db.once('open', async () => {
   await League.deleteMany({});

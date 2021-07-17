@@ -100,6 +100,71 @@
         "teamLogo": "Los_Angeles_Chargers.png"
       },
       {
+        "teamCity": "Los Angeles",
+        "teamName": "Rams",
+        "teamLogo": "Los_Angeles_Rams.png"
+      },
+      {
+        "teamCity": "Miami",
+        "teamName": "Dolphins",
+        "teamLogo": "Miami_Dolphins.png"
+      },
+      {
+        "teamCity": "Minnesota",
+        "teamName": "Vikings",
+        "teamLogo": "Minnesota_Vikings.png"
+      },
+      {
+        "teamCity": "New England",
+        "teamName": "Patriots",
+        "teamLogo": "New_England_Patriots.png"
+      },
+      {
+        "teamCity": "New Orleans",
+        "teamName": "Saints",
+        "teamLogo": "New_Orleans_Saints.png"
+      },
+      {
+        "teamCity": "New York",
+        "teamName": "Giants",
+        "teamLogo": "New_York_Giants.png"
+      },
+      {
+        "teamCity": "New York",
+        "teamName": "Jets",
+        "teamLogo": "New_York_Jets.png"
+      },
+      {
+        "teamCity": "Philadelphia",
+        "teamName": "Eagles",
+        "teamLogo": "Philadelphia_Eagles.png"
+      },
+      {
+        "teamCity": "Pittsburgh",
+        "teamName": "Steelers",
+        "teamLogo": "Pittsburgh_Steelers.png"
+      },
+      {
+        "teamCity": "San Francisco",
+        "teamName": "Giants",
+        "teamLogo": "San_Francisco_Giants.png"
+      },
+      {
+        "teamCity": "Seattle",
+        "teamName": "Seahawks",
+        "teamLogo": "Seattle_Seahawks.png"
+      },
+      {
+        "teamCity": "Tampa Bay",
+        "teamName": "Buccaneers",
+        "teamLogo": "Tampa_Bay_Buccaneers.png"
+      },
+      {
+        "teamCity": "Nashville",
+        "teamName": "Titans",
+        "teamLogo": "Tennessee_Titans.png"
+      },
+      {
         "teamCity": "Washington DC",
         "teamName": "Football Team",
         "teamLogo": "Washington_Football_Team.png"
