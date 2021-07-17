@@ -2,11 +2,118 @@
   {
     "leagueInitials": "NFL",
     "leagueName": "National Football League",
-    "leagueLogo": "_NFL_Logo.png"
+    "leagueLogo": "_NFL_Logo.png",
+    "team": [
+      {
+        "teamCity": "Phoenix",
+        "teamName": "Cardinals",
+        "teamLogo": "Arizona_Cardinals.png"
+      },
+      {
+        "teamCity": "Atlanta",
+        "teamName": "Falcons",
+        "teamLogo": "Atlanta_Falcons.png"
+      },
+      {
+        "teamCity": "Baltimore",
+        "teamName": "Ravens",
+        "teamLogo": "Baltimore_Ravens.png"
+      },
+      {
+        "teamCity": "Buffalo",
+        "teamName": "Bills",
+        "teamLogo": "Buffalo_Bills.png"
+      },
+      {
+        "teamCity": "Atlanta",
+        "teamName": "Falcons",
+        "teamLogo": "Atlanta_Falcons.png"
+      },
+      {
+        "teamCity": "Charlotte",
+        "teamName": "Panthers",
+        "teamLogo": "Carolina_Panthers.png"
+      },
+      {
+        "teamCity": "Chicago",
+        "teamName": "Bears",
+        "teamLogo": "Chicago_Bears.png"
+      },
+      {
+        "teamCity": "Cincinnati",
+        "teamName": "Bengals",
+        "teamLogo": "Cincinnati_Bengals.png"
+      },
+      {
+        "teamCity": "Cleveland",
+        "teamName": "Browns",
+        "teamLogo": "Cleveland_Browns.png"
+      },
+      {
+        "teamCity": "Dallas",
+        "teamName": "Cowboys",
+        "teamLogo": "Dallas_Cowboys.png"
+      },
+      {
+        "teamCity": "Denver",
+        "teamName": "Broncos",
+        "teamLogo": "Denver_Broncos.png"
+      },
+      {
+        "teamCity": "Detroit",
+        "teamName": "Lions",
+        "teamLogo": "Detroit_Lions.png"
+      },
+      {
+        "teamCity": "Green Bay",
+        "teamName": "Packers",
+        "teamLogo": "Green_Bay_Packers.png"
+      },
+      {
+        "teamCity": "Houston",
+        "teamName": "Texans",
+        "teamLogo": "Houston_Texans.png"
+      },
+      {
+        "teamCity": "Indianapolis",
+        "teamName": "Colts",
+        "teamLogo": "Indianapolis_Colts.png"
+      },
+      {
+        "teamCity": "Jacksonville",
+        "teamName": "Jaguars",
+        "teamLogo": "Jacksonville_Jaguars.png"
+      },
+      {
+        "teamCity": "Kansas City",
+        "teamName": "Chiefs",
+        "teamLogo": "Kansas_City_Chiefs.png"
+      },
+      {
+        "teamCity": "Las Vegas",
+        "teamName": "Raiders",
+        "teamLogo": "Las_Vegas_Raiders.png"
+      },
+      {
+        "teamCity": "Los Angeles",
+        "teamName": "Chargers",
+        "teamLogo": "Los_Angeles_Chargers.png"
+      },
+      {
+        "teamCity": "Washington DC",
+        "teamName": "Football Team",
+        "teamLogo": "Washington_Football_Team.png"
+      }
+    ]
   },
   {
     "leagueInitials": "NBA",
     "leagueName": "National Basketball Association",
     "leagueLogo": "_NBA_Logo.png"
+  },
+  {
+    "leagueInitials": "WNBA",
+    "leagueName": "Women's National Basektball Association",
+    "leagueLogo": "_WNBA_Logo.png"
   }
 ]
