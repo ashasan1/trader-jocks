@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
+const bcrypt = require('bcrypt');
 
 const itemSchema = require('./Item');
 
@@ -23,6 +24,16 @@ const userSchema = new Schema({
 	},
 	items: [itemSchema]
 
+});
+
+// hash password with bcrypt before saving
+userSchema.pre('save', async function (next) {
+	if (this.isNew || this.isModified('password')) {
+		const saltRounds = 10;
+		this.password = await bcrypt.hash(this.password, saltRounds);
+	 }
+	 
+	next();
 });
 
 const User = model('User', userSchema);
