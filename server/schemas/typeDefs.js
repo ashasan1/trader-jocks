@@ -38,11 +38,17 @@ const typeDefs = gql`
     league(leagueId: ID!): League
   }
 
+  type Auth {
+	  token: ID!
+	  user: User
+  }
+
   type Mutation {
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
     removeLeague(leagueId: ID!): League
     removeTeam(leagueId: ID!, teamId: ID!): League
+	 addUser(username: String!, password: String!, email: String!): Auth
   }
 `;
 
