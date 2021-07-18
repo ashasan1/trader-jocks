@@ -174,7 +174,34 @@
   {
     "leagueInitials": "NBA",
     "leagueName": "National Basketball Association",
-    "leagueLogo": "_NBA_Logo.png"
+    "leagueLogo": "_NBA_Logo.png",
+    "team": [
+    {
+      "teamCity": "Atlanta",
+      "teamName": "Hawks",
+      "teamLogo": "Atlanta_Hawks.png"
+    },
+    {
+      "teamCity": "Boston",
+      "teamName": "Celtics",
+      "teamLogo": "Boston_Celtics.png"
+    },
+    {
+      "teamCity": "Brooklyn",
+      "teamName": "Nets",
+      "teamLogo": "Brooklyn_Nets.png"
+    },
+    {
+      "teamCity": "Charlotte",
+      "teamName": "Hornets",
+      "teamLogo": "Charlotte_Hornets.png"
+    },
+    {
+      "teamCity": "Washington DC",
+      "teamName": "Wizzards",
+      "teamLogo": "Washington_Wizzards.png"
+    }
+  ]
   },
   {
     "leagueInitials": "WNBA",
