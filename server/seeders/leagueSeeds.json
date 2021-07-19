@@ -326,6 +326,68 @@
   {
     "leagueInitials": "WNBA",
     "leagueName": "Women's National Basektball Association",
-    "leagueLogo": "_WNBA_Logo.png"
+    "leagueLogo": "_WNBA_Logo.png",
+    "team": [
+      {
+        "teamCity": "Atlanta",
+        "teamName": "Dream",
+        "teamLogo": "Atlanta_Dream.png"
+      },
+      {
+        "teamCity": "Chicago",
+        "teamName": "Sky",
+        "teamLogo": "Chicago_Sky.png"
+      },
+      {
+        "teamCity": "Uncasville",
+        "teamName": "Sun",
+        "teamLogo": "Connecticut_Sun.png"
+      },
+      {
+        "teamCity": "Dallas",
+        "teamName": "Wings",
+        "teamLogo": "Dallas_Wings.png"
+      },
+      {
+        "teamCity": "Indiana",
+        "teamName": "Fever",
+        "teamLogo": "Indiana_Fever.png"
+      },
+      {
+        "teamCity": "Las Vegas",
+        "teamName": "Aces",
+        "teamLogo": "Las_Vegas_Aces.png"
+      },
+      {
+        "teamCity": "Los Angeles",
+        "teamName": "Sparks",
+        "teamLogo": "Los_Angeles_Sparks.png"
+      },
+      {
+        "teamCity": "Minneapolisa",
+        "teamName": "Lynx",
+        "teamLogo": "Minnesota_Lynx.png"
+      },
+      {
+        "teamCity": "New York",
+        "teamName": "Liberty",
+        "teamLogo": "New_York_Liberty.png"
+      },
+      {
+        "teamCity": "Phoenix",
+        "teamName": "Mercury",
+        "teamLogo": "Phoenix_Mercury.png"
+      },
+      {
+        "teamCity": "Seattle",
+        "teamName": "Storm",
+        "teamLogo": "Seattle_Storm.png"
+      },
+      {
+        "teamCity": "Washington DC",
+        "teamName": "Mystics",
+        "teamLogo": "Washington_Mystics.png"
+      }
+    ]
   }
 ]
