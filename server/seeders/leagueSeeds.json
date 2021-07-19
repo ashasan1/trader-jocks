@@ -541,5 +541,158 @@
         "teamLogo": "Winnipeg_Jets.png"
       }
     ]
+  },
+  {
+    "leagueInitials": "MLB",
+    "leagueName": "Major League Baseball",
+    "leagueLogo": "_MLB_Logo.png",
+    "team": [
+      {
+        "teamCity": "Phoenix",
+        "teamName": "Diamondbacks",
+        "teamLogo": "Arizona_Diamondbacks.png"
+      },
+      {
+        "teamCity": "Atlanta",
+        "teamName": "Braves",
+        "teamLogo": "Atlanta_Braves.png"
+      },
+
+      {
+        "teamCity": "Boston",
+        "teamName": "Redsocks",
+        "teamLogo": "Boston_Redsocks.png"
+      },
+      {
+        "teamCity": "Chicago",
+        "teamName": "Cubs",
+        "teamLogo": "Chicago_Cubs.png"
+      },
+      {
+        "teamCity": "Chicago",
+        "teamName": "White Sox",
+        "teamLogo": "Chicago_White_Sox.png"
+      },
+      {
+        "teamCity": "Cincinatti",
+        "teamName": "Reds",
+        "teamLogo": "Cincinatti_Reds.png"
+      },
+      {
+        "teamCity": "Cleveland",
+        "teamName": "Indians",
+        "teamLogo": "Cleveland_Indians.png"
+      },
+      {
+        "teamCity": "Denver",
+        "teamName": "Rockies",
+        "teamLogo": "Colorado_Rockies.png"
+      },
+      {
+        "teamCity": "Detroit",
+        "teamName": "Tigers",
+        "teamLogo": "Detroit_Tigers.png"
+      },
+      {
+        "teamCity": "Houston",
+        "teamName": "Astros",
+        "teamLogo": "Houston_Astros.png"
+      },
+      {
+        "teamCity": "Kansas City",
+        "teamName": "Royals",
+        "teamLogo": "Kansas_City_Royals.png"
+      },
+      {
+        "teamCity": "Los Angeles",
+        "teamName": "Angels",
+        "teamLogo": "Los_Angeles_Angels.png"
+      },
+      {
+        "teamCity": "Los Angeles",
+        "teamName": "Dodgers",
+        "teamLogo": "Los_Angeles_Dodgers.png"
+      },
+      {
+        "teamCity": "Miami",
+        "teamName": "Marlins",
+        "teamLogo": "Miami_Marlins.png"
+      },
+      {
+        "teamCity": "Milwaukee",
+        "teamName": "Brewers",
+        "teamLogo": "Milwaukee_Brewers.png"
+      },
+      {
+        "teamCity": "St Paul",
+        "teamName": "Brewers",
+        "teamLogo": "Minnesota_Brewers.png"
+      },
+      {
+        "teamCity": "New York",
+        "teamName": "Mets",
+        "teamLogo": "New_York_Mets.png"
+      },
+      {
+        "teamCity": "New York",
+        "teamName": "Yankees",
+        "teamLogo": "New_York_Yankees.png"
+      },
+      {
+        "teamCity": "Philadelphia",
+        "teamName": "Phillies",
+        "teamLogo": "Philadelphia_Phillies.png"
+      },
+      {
+        "teamCity": "Pittsburg",
+        "teamName": "Pirates",
+        "teamLogo": "Pittsburg_Pirates.png"
+      },
+      {
+        "teamCity": "San Diego",
+        "teamName": "Padres",
+        "teamLogo": "San_Diego_Padres.png"
+      },
+      {
+        "teamCity": "San Francisco",
+        "teamName": "Giants",
+        "teamLogo": "San_Francisco_Giants.png"
+      },
+      {
+        "teamCity": "Seattle",
+        "teamName": "Mariners",
+        "teamLogo": "Seattle_Mariners.png"
+      },
+      {
+        "teamCity": "St Louis",
+        "teamName": "Cardinals",
+        "teamLogo": "St_Louis_Cardinals.png"
+      },
+      {
+        "teamCity": "Tampa Bay",
+        "teamName": "Rays",
+        "teamLogo": "Tampa_Bay_Rays.png"
+      },
+      {
+        "teamCity": "San Antonio",
+        "teamName": "Rangers",
+        "teamLogo": "Texas_Rangers.png"
+      },
+      {
+        "teamCity": "Toronto",
+        "teamName": "Blue Jays",
+        "teamLogo": "Toronto_Blue_Jays.png"
+      },
+      {
+        "teamCity": "Phoenix",
+        "teamName": "Diamondbacks",
+        "teamLogo": "Arizona_Diamondbacks.png"
+      },
+      {
+        "teamCity": "Washington DC",
+        "teamName": "Nationals",
+        "teamLogo": "Washington_Nationals.png"
+      }
+    ]
   }
 ]
