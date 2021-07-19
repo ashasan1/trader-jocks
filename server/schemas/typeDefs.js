@@ -1,13 +1,28 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type League {
-    _id: ID
-    leagueInitials: String
-    leagueName: String
-    leagueLogo: String
-    createdAt: String
-    Teams: [Team]!
+  type Item {
+		_id: ID
+		title: String
+		description: String
+		imageURL: String
+		price: String
+  }
+
+  type User {
+		_id: ID
+		username: String
+		email: String
+		items: [Item]
+  }
+
+	type League {
+		_id: ID
+		leagueInitials: String
+		leagueName: String
+		leagueLogo: String
+		createdAt: String
+		Teams: [Team]!
   }
 
   type Team {
@@ -23,11 +38,17 @@ const typeDefs = gql`
     league(leagueId: ID!): League
   }
 
+  type Auth {
+	  token: ID!
+	  user: User
+  }
+
   type Mutation {
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
     removeLeague(leagueId: ID!): League
     removeTeam(leagueId: ID!, teamId: ID!): League
+	 addUser(username: String!, password: String!, email: String!): Auth
   }
 `;
 
