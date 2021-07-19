@@ -197,6 +197,126 @@
       "teamLogo": "Charlotte_Hornets.png"
     },
     {
+      "teamCity": "Cleveland",
+      "teamName": "Cavaliers",
+      "teamLogo": "Clevland_Cavaliers.png"
+    },
+    {
+      "teamCity": "Dallas",
+      "teamName": "Mavericks",
+      "teamLogo": "Dallas_Mavericks.png"
+    },
+    {
+      "teamCity": "Denver",
+      "teamName": "Nuggets",
+      "teamLogo": "Denver_Nuggets.png"
+    },
+    {
+      "teamCity": "Detroit",
+      "teamName": "Pistons",
+      "teamLogo": "Detroit_Pistons.png"
+    },
+    {
+      "teamCity": "Sacremento",
+      "teamName": "Warriors",
+      "teamLogo": "Goldent_State_Warriors.png"
+    },
+    {
+      "teamCity": "Houston",
+      "teamName": "Rockets",
+      "teamLogo": "Houston_Rockets.png"
+    },
+    {
+      "teamCity": "Indiana",
+      "teamName": "Pacers",
+      "teamLogo": "Indiana_Pacers.png"
+    },
+    {
+      "teamCity": "Los Angeles",
+      "teamName": "Clippers",
+      "teamLogo": "Los_Angeles_Clippers.png"
+    },
+    {
+      "teamCity": "Los Angeles",
+      "teamName": "Lakers",
+      "teamLogo": "Los_Angeles_Lakers.png"
+    },
+    {
+      "teamCity": "Memphis",
+      "teamName": "Grizzlies",
+      "teamLogo": "Memphis_Grizzlies.png"
+    },
+    {
+      "teamCity": "Miami",
+      "teamName": "Heat",
+      "teamLogo": "Miami_Heat.png"
+    },
+    {
+      "teamCity": "Milwaukee",
+      "teamName": "Bucks",
+      "teamLogo": "Milwaukee_Bucks.png"
+    },
+    {
+      "teamCity": "Minnesota",
+      "teamName": "Timberwolves",
+      "teamLogo": "Minnesota_Timberwolves.png"
+    },
+    {
+      "teamCity": "New Orleans",
+      "teamName": "Pelicans",
+      "teamLogo": "New_Orleans_Pelicans.png"
+    },
+    {
+      "teamCity": "New York",
+      "teamName": "Nicks",
+      "teamLogo": "New_York_Nicks.png"
+    },
+    {
+      "teamCity": "Oklahoma City",
+      "teamName": "Thunder",
+      "teamLogo": "Oklahoma_City_Thunder.png"
+    },
+    {
+      "teamCity": "Orlando",
+      "teamName": "Magic",
+      "teamLogo": "Orlando_Magic.png"
+    },
+    {
+      "teamCity": "Philadelphia",
+      "teamName": "76ers",
+      "teamLogo": "Philadelphia_76ers.png"
+    },
+    {
+      "teamCity": "Phoenix",
+      "teamName": "Suns",
+      "teamLogo": "Phoenix_Suns.png"
+    },
+    {
+      "teamCity": "Portland",
+      "teamName": "Trail Blazers",
+      "teamLogo": "Portland_Trail_Blazers.png"
+    },
+    {
+      "teamCity": "Sacramento",
+      "teamName": "Kings",
+      "teamLogo": "Sacramento_Kings.png"
+    },
+    {
+      "teamCity": "San Antoino",
+      "teamName": "Spurs",
+      "teamLogo": "San_Antonio_Spurs.png"
+    },
+    {
+      "teamCity": "Toronto",
+      "teamName": "Raptors",
+      "teamLogo": "Toronto_Raptors.png"
+    },
+    {
+      "teamCity": "Salt Lake City",
+      "teamName": "Jazz",
+      "teamLogo": "Utah_Jazz.png"
+    },
+    {
       "teamCity": "Washington DC",
       "teamName": "Wizzards",
       "teamLogo": "Washington_Wizzards.png"
