@@ -389,5 +389,157 @@
         "teamLogo": "Washington_Mystics.png"
       }
     ]
+  },
+  {
+    "leagueInitials": "NHL",
+    "leagueName": "National Hockey League",
+    "leagueLogo": "_NHL_Logo.png",
+    "team": [
+      {
+        "teamCity": "Anaheim",
+        "teamName": "Ducks",
+        "teamLogo": "Anaheim_Ducks.png"
+      },
+      {
+        "teamCity": "Phoenix",
+        "teamName": "Coyotes",
+        "teamLogo": "Arizona_Coyotes.png"
+      },
+      {
+        "teamCity": "Boston",
+        "teamName": "Bruins",
+        "teamLogo": "Boston_Bruins.png"
+      },
+      {
+        "teamCity": "Buffalo",
+        "teamName": "Sabres",
+        "teamLogo": "Buffalo_Sabres.png"
+      },
+      {
+        "teamCity": "Calgary",
+        "teamName": "Flames",
+        "teamLogo": "Calgary_Flames.png"
+      },
+      {
+        "teamCity": "Charlotte",
+        "teamName": "Hurricanes",
+        "teamLogo": "Carolina_Hurricanes.png"
+      },
+      {
+        "teamCity": "Chicago",
+        "teamName": "Blackhawks",
+        "teamLogo": "Chicago_Blackhawks.png"
+      },
+      {
+        "teamCity": "Denver",
+        "teamName": "Avalanche",
+        "teamLogo": "Colorado_Avalanche.png"
+      },
+      {
+        "teamCity": "Columbus",
+        "teamName": "Blue Jackets",
+        "teamLogo": "Columbus_Blue_Jackets.png"
+      },
+      {
+        "teamCity": "Dallas",
+        "teamName": "Stars",
+        "teamLogo": "Dallas_Stars.png"
+      },
+      {
+        "teamCity": "Detroit",
+        "teamName": "Redwings",
+        "teamLogo": "Detroit_Redwings.png"
+      },
+      {
+        "teamCity": "Edmondton",
+        "teamName": "Oilers",
+        "teamLogo": "Edmondton_Oilers.png"
+      },
+      {
+        "teamCity": "Miami",
+        "teamName": "Panthers",
+        "teamLogo": "Fllrida_Panthers.png"
+      },
+      {
+        "teamCity": "Los Angeles",
+        "teamName": "Kings",
+        "teamLogo": "Los_Angeles_Kings.png"
+      },
+      {
+        "teamCity": "Saint Paul",
+        "teamName": "Wild",
+        "teamLogo": "Minnesota_Wild.png"
+      },
+      {
+        "teamCity": "Nashville",
+        "teamName": "Predators",
+        "teamLogo": "Nashville_Predators.png"
+      },
+      {
+        "teamCity": "Newark",
+        "teamName": "Devils",
+        "teamLogo": "New_Jersey_Devils.png"
+      },
+      {
+        "teamCity": "New York",
+        "teamName": "Islanders",
+        "teamLogo": "New_York_Islanders.png"
+      },
+      {
+        "teamCity": "New York",
+        "teamName": "Rangers",
+        "teamLogo": "New_York_Rangers.png"
+      },
+      {
+        "teamCity": "Ottowa",
+        "teamName": "Senators",
+        "teamLogo": "Ottowa_Senators.png"
+      },
+      {
+        "teamCity": "Philadelphia",
+        "teamName": "Flyers",
+        "teamLogo": "Philadelphia_Flyers.png"
+      },
+      {
+        "teamCity": "Pittsburgh",
+        "teamName": "Penguins",
+        "teamLogo": "Pittsburgh_Penguins.png"
+      },
+      {
+        "teamCity": "San Jose",
+        "teamName": "Sharks",
+        "teamLogo": "San_Jose_Sharks.png"
+      },
+      {
+        "teamCity": "St Louis",
+        "teamName": "Blues",
+        "teamLogo": "St_Louis_Blues.png"
+      },
+      {
+        "teamCity": "Tampa Bay",
+        "teamName": "Lightning",
+        "teamLogo": "Tampa_Bay_Lightning.png"
+      },
+      {
+        "teamCity": "Toronto",
+        "teamName": "Maple Leafs",
+        "teamLogo": "Toronto_Maple_Leafs.png"
+      },
+      {
+        "teamCity": "Vancouver",
+        "teamName": "Canucks",
+        "teamLogo": "VAncouver_Cannucks.png"
+      },
+      {
+        "teamCity": "Washington DC",
+        "teamName": "Capitals",
+        "teamLogo": "Washington_Capitals.png"
+      },
+      {
+        "teamCity": "Winnipeg",
+        "teamName": "Jets",
+        "teamLogo": "Winnipeg_Jets.png"
+      }
+    ]
   }
 ]
