@@ -21,8 +21,7 @@ const userSchema = new Schema({
 	password: {
 		type: String,
 		required: 'User must have a password.'
-	},
-	items: [itemSchema]
+	}
 
 });
 

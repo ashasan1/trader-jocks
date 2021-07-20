@@ -10,6 +10,10 @@ const resolvers = {
 		league: async (parent, { leagueId }) => {
 			return League.findOne({ _id: leagueId });
 		},
+		
+		leagueByInitials: async (parent, { initials }) => {
+			return League.findOne({ leagueInitials: initials });
+		},
 	},
 
 	Mutation: {

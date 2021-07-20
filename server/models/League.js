@@ -24,9 +24,9 @@ const leagueSchema = new Schema({
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
-  teams: [
+  team: [
     {
-      cityName: {
+      teamCity: {
         type: String,
         required: true,
         trim: true,

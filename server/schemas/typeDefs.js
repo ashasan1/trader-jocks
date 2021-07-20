@@ -22,12 +22,12 @@ const typeDefs = gql`
 		leagueName: String
 		leagueLogo: String
 		createdAt: String
-		Teams: [Team]!
+		team: [Team]!
   }
 
   type Team {
     _id: ID
-    cityName: String
+    teamCity: String
     teamName: String
     teamLogo: String
     createdAt: String
@@ -36,6 +36,7 @@ const typeDefs = gql`
   type Query {
     leagues: [League]!
     league(leagueId: ID!): League
+    leagueByInitials(initials: String!): League
   }
 
   type Auth {
