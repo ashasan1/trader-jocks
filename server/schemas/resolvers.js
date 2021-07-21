@@ -1,15 +1,28 @@
 const { League } = require('../models');
+const { Team } = require('../models');
 const User = require('../models/User');
 
 const resolvers = {
 	Query: {
 		leagues: async () => {
-			return League.find().sort({ createdAt: -1 });
+			return League.find().sort({ leagueInitials: 1 }).populate('teams');
 		},
 
 		league: async (parent, { leagueId }) => {
 			return League.findOne({ _id: leagueId });
 		},
+		
+		leagueByInitials: async (parent, { initials }) => {
+			return League.findOne({ leagueInitials: initials }).populate('teams');
+		},
+
+		team: async () => {
+			return Team.find();
+		}
+				
+		// leagueByTeamId: async (parent, { teamId }) => {
+		// 	return League.findOne({ team_id: teamId });
+		// }
 	},
 
 	Mutation: {

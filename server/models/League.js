@@ -19,35 +19,17 @@ const leagueSchema = new Schema({
     required: true,
     trim: true,
   },
+  teams: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Team'
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
-  teams: [
-    {
-      cityName: {
-        type: String,
-        required: true,
-        trim: true,
-      },
-      teamName: {
-        type: String,
-        required: true,
-        trim: true,
-      },
-      teamLogo: {
-        type: String,
-        required: true,
-        trim: true,
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (timestamp) => dateFormat(timestamp),
-      },
-    },
-  ],
 });
 
 const League = model('League', leagueSchema);
