@@ -22,7 +22,7 @@ const typeDefs = gql`
 		leagueName: String
 		leagueLogo: String
 		createdAt: String
-		team: [Team]!
+		teams: [Team]!
   }
 
   type Team {
@@ -37,6 +37,8 @@ const typeDefs = gql`
     leagues: [League]!
     league(leagueId: ID!): League
     leagueByInitials(initials: String!): League
+    teams: [Team]
+    team(id: ID!): [Team]
   }
 
   type Auth {
