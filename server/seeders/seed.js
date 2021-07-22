@@ -1,17 +1,23 @@
 const db = require('../config/connection');
-const { League, Team } = require('../models');
+const { Item, League, Team, User } = require('../models');
 
+const itemData = require('./itemData.json');
 const leagueData = require('./leagueData.json');
 const teamData = require('./teamData.json');
+const userData = require('./userData.json');
 
 db.once('open', async () => {
   // Clear the database
+  await Item.deleteMany({});
   await League.deleteMany({});
   await Team.deleteMany({});
+  await User.deleteMany({});
 
   // Bulk Load the database
+  const items = await Item.insertMany(itemData)
   const leagues = await League.insertMany(leagueData);
   const teams = await Team.insertMany(teamData);
+  const users = await User.insertMany(userData)
 
   // Assign teams to leagues
   for (newLeague of leagues) {
