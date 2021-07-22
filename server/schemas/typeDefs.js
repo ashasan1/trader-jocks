@@ -52,13 +52,13 @@ const typeDefs = gql`
   }
 
   type Mutation {
+    addItem(title: String!, description: String!, imageUrl: String, price: String): Item
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
-    addItem(title: String!, description: String!, imageUrl: String, price: String): Item
 	  addUser(username: String!, password: String!, email: String!): Auth
+    removeItem(itemId: ID!): Item
     removeLeague(leagueId: ID!): League
     removeTeam(leagueId: ID!, teamId: ID!): League
-    removeItem(itemId: ID!): Item
     removeUser(userId: ID!): User
   }
 `;

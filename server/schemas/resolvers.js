@@ -1,6 +1,5 @@
-const { League } = require('../models');
-const { Team } = require('../models');
-const User = require('../models/User');
+
+const { Item, League, Team, User } = require('../models');
 
 const resolvers = {
 	Query: {
@@ -40,6 +39,9 @@ const resolvers = {
 	},
 
 	Mutation: {
+		addItem: async (parent, { title, description, imageURL, price }) => {
+			return Item.create({ title, description, imageURL, price });
+		},
 		addLeague: async (parent, { leagueInitials, leagueName, leagueLogo }) => {
 			return League.create({ leagueInitials, leagueName, leagueLogo });
 		},
@@ -55,6 +57,14 @@ const resolvers = {
 				}
 			);
 		},
+		addUser: async (parent, { name, email, password }) => {
+			const newUser = await User.create({ username, email, password });
+			const token = signToken(newUser);
+			return { token, newUser };
+		},
+		removeItem: async (parent, { itemId }) => {
+			return Item.findOneAndDelete({ _id: itemId });
+		},
 		removeLeague: async (parent, { leagueId }) => {
 			return League.findOneAndDelete({ _id: leagueId });
 		},
@@ -65,13 +75,9 @@ const resolvers = {
 				{ new: true }
 			);
 		},
-
-		addUser: async (parent, { name, email, password }) => {
-			const newUser = await User.create({ username, email, password });
-			const token = signToken(newUser);
-			return { token, newUser };
+		removeUser: async (parent, { userId }) => {
+			return User.findOneAndDelete({ _id: userId });
 		}
-
 	},
 };
 
