@@ -29,7 +29,7 @@ const leagueSchema = new Schema({
     type: Date,
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
-  },
+  }
 });
 
 const League = model('League', leagueSchema);
