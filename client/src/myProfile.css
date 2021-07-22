@@ -1,0 +1,45 @@
+a{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+    font-size: 15px;
+}
+
+img{
+    max-width: 250px;
+    max-height: 350px;
+}
+
+#main{
+    border-style: solid;
+    border-width: 1px;
+    height: 50px;
+}
+.nav{
+    margin-top: 12px;
+}
+
+#logout{
+    margin-left: 640px;
+}
+
+#offers{
+    margin-right: 15px;
+}
+
+#body{
+    border-style: solid;
+    border-width: 1px;
+    height: 750px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+}
+
+.items{
+    width: 250px;
+    height: 350px;
+    margin-top: 10px;
+    margin-left: 46px; 
+}
+

@@ -11,8 +11,11 @@ function App() {
     // <ApolloProvider client={client}>
         // <Router>
           <>
+           
+          
           <Navbar />
           <TraderJocksLogo />
+         
           {/* <Switch> */}
             {/* <Route exact path='/' component={Home} /> */}
             {/* <Route exact path='/saved' component={SavedBooks} /> */}
