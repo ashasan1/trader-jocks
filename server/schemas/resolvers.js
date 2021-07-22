@@ -4,6 +4,10 @@ const User = require('../models/User');
 
 const resolvers = {
 	Query: {
+		items: async () => {
+			return Item.find().sort({ title: 1 });
+		},
+
 		leagues: async () => {
 			return League.find().sort({ leagueInitials: 1 }).populate('teams');
 		},
@@ -18,7 +22,17 @@ const resolvers = {
 
 		team: async () => {
 			return Team.find();
-		}
+		},
+		
+		user: async (parent, { userId }) => {
+			return User.findOne({ _id: userId });
+		},
+		
+		userByUserName: async (parent, { usrName }) => {
+			return League.findOne({ userName: usrName }).populate('items');
+		},
+
+
 				
 		// leagueByTeamId: async (parent, { teamId }) => {
 		// 	return League.findOne({ team_id: teamId });
