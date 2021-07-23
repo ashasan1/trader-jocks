@@ -1,7 +1,7 @@
 import React from 'react';
 // import Auth from '../utils/auth';
 import { Carousel, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
-import 'C:/Users/asha/gt-bootcamp/projects/Project-3/client/src/index.css'
+import '../index.css'
 
 function Home() {
     return (
