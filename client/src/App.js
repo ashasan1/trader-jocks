@@ -4,10 +4,10 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home';
-import Navbar from './components/Navbar.js';
+import TraderNavbar from './components/TraderNavbar.js';
 import TraderJocksLogo from './components/TraderJocksLogo';
 import Header from './components/Header';
-import  Carousel from './components/Carousel';
+import Footer from './components/Footer';
 
 const client = new ApolloClient({
   cache:new InMemoryCache(),
@@ -30,14 +30,14 @@ function App() {
         <Router>
           <>
           <Header />
-          <Navbar />
-          {/* <Carousel /> */}
-          <TraderJocksLogo />
+              <TraderNavbar />
+          {/* <TraderJocksLogo /> */}   
           <Switch>
             <Route exact path='/' component={Home} />
             <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
           </Switch>
           </>
+          <Footer />
           </Router> 
      </ApolloProvider>
   );
