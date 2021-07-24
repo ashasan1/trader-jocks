@@ -10,15 +10,7 @@ const typeDefs = gql`
     team: [Team]!
   }
 
-  type User {
-		_id: ID
-		username: String
-		email: String
-		items: [Item]!
-		createdAt: String
-  }
-
-	type League {
+  type League {
 		_id: ID
 		leagueInitials: String
 		leagueName: String
@@ -35,6 +27,14 @@ const typeDefs = gql`
     createdAt: String
   }
 
+  type User {
+		_id: ID
+		username: String
+		email: String
+		items: [Item]!
+		createdAt: String
+  }
+
   type Query {
     items: [Item]!
     leagues: [League]!
@@ -42,7 +42,8 @@ const typeDefs = gql`
     leagueByInitials(initials: String!): League
     teams: [Team]
     team(id: ID!): [Team]
-    user(userId: ID!): [User]
+    users: [User]!
+    user(userId: ID!): User
     userByUserName(userName: String!): User
   }
 
@@ -62,5 +63,6 @@ const typeDefs = gql`
     removeUser(userId: ID!): User
   }
 `;
-
+// user(userId: ID!): [User]
+// userByUserName(userName: String!): User
 module.exports = typeDefs;
