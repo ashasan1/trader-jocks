@@ -1,0 +1,27 @@
+[
+    {
+      "username": "JustinByrd",
+      "email": "Justin.Byrd@gmail.com",
+      "password": "secret"
+    },
+    {
+        "username": "OmariGrampus",
+        "email": "Omari.Grampus@gmail.com",
+        "password": "secret"
+    },
+    {
+        "username": "AshaSanford",
+        "email": "Asha.Sanford@gmail.com",
+        "password": "secret"
+    },
+    {
+        "username": "DavidFigueroa",
+        "email": "David.Figueroa@gmail.com",
+        "password": "secret"
+    },
+    {
+        "username": "MarkHarrison",
+        "email": "Mark.Harrison@gmail.com",
+        "password": "secret"
+    }
+  ]

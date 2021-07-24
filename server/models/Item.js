@@ -20,7 +20,18 @@ const itemSchema = new Schema({
 		type: String,
 		required: 'Item must have a price.',
 		trim: true
-	}
+	},
+	team: [
+		{
+		  type: Schema.Types.ObjectId,
+		  ref: 'Team'
+		},
+	  ],
+	  createdAt: {
+		type: Date,
+		default: Date.now,
+		get: (timestamp) => dateFormat(timestamp),
+	  }
 });
 
 const Item = model('Item', itemSchema);

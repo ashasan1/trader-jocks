@@ -21,7 +21,18 @@ const userSchema = new Schema({
 	password: {
 		type: String,
 		required: 'User must have a password.'
-	}
+	},
+	items: [
+	  {
+		type: Schema.Types.ObjectId,
+		ref: 'Item'
+	  },
+	],
+	createdAt: {
+	  type: Date,
+	  default: Date.now,
+	  get: (timestamp) => dateFormat(timestamp),
+	},
 
 });
 
