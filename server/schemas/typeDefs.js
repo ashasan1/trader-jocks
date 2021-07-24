@@ -7,7 +7,9 @@ const typeDefs = gql`
 		description: String
 		imageURL: String
 		price: String
-    team: [Team]!
+    playerName: String
+    playerSoundex: String
+    team: Team!
   }
 
   type League {
@@ -53,7 +55,13 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addItem(title: String!, description: String!, imageUrl: String, price: String): Item
+    addItem(title: String!, 
+            description: String!, 
+            imageURL: String, 
+            price: String,
+            playerName: String,
+            playerSoundex: String,
+            team: Team): Item
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
 	  addUser(username: String!, password: String!, email: String!): Auth
@@ -63,6 +71,5 @@ const typeDefs = gql`
     removeUser(userId: ID!): User
   }
 `;
-// user(userId: ID!): [User]
-// userByUserName(userName: String!): User
+
 module.exports = typeDefs;

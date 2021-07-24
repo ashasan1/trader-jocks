@@ -21,12 +21,21 @@ const itemSchema = new Schema({
 		required: 'Item must have a price.',
 		trim: true
 	},
-	team: [
+	playerName: {
+		type: String,
+		required: false,
+		trim: true
+	},
+	playerSoundex: {
+		type: String,
+		required: false,
+		trim: true
+	},
+	team:
 		{
 		  type: Schema.Types.ObjectId,
 		  ref: 'Team'
 		},
-	  ],
 	  createdAt: {
 		type: Date,
 		default: Date.now,
