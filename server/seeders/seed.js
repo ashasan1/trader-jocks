@@ -1,5 +1,6 @@
 const db = require('../config/connection');
 const { Item, League, Team, User } = require('../models');
+const word = require('../utils/soundex');
 
 const itemData = require('./itemData.json');
 const leagueData = require('./leagueData.json');
@@ -14,7 +15,7 @@ db.once('open', async () => {
   await User.deleteMany({});
 
   // Bulk Load the database
-  const allItems = await Item.insertMany(itemData)
+  const items = await Item.insertMany(itemData)
   const leagues = await League.insertMany(leagueData);
   const teams = await Team.insertMany(teamData);
   const users = await User.insertMany(userData)
@@ -59,26 +60,33 @@ db.once('open', async () => {
     }
   };
 
+  // Build playerSoundex in items
+  for (newItem of items) {
+    newItem.playerSoundex = word.soundex(newItem.playerName);
+    console.log(`Item: ${newItem.title} PlayerName: ${newItem.playerName} PlayerSoundex: ${newItem.playerSoundex}`);
+    await newItem.save();
+  }
+
   // Assign items to Omari
-  console.log( `${users[1].username} - ${allItems[0]._id}, ${allItems[0].title}` );
-  users[1].items.push(allItems[0]._id);
-  console.log( `${users[1].username} - ${allItems[2]._id}, ${allItems[2].title}` );
-  users[1].items.push(allItems[2]._id);
-  console.log( `${users[1].username} - ${allItems[3]._id}, ${allItems[3].title}` );
-  users[1].items.push(allItems[3]._id);
-  console.log( `${users[1].username} - ${allItems[4]._id}, ${allItems[4].title}` );
-  users[1].items.push(allItems[4]._id);
-  console.log( `${users[1].username} - ${allItems[6]._id}, ${allItems[6].title}` );
-  users[1].items.push(allItems[6]._id);
-  console.log( `${users[1].username} - ${allItems[7]._id}, ${allItems[7].title}` );
-  users[1].items.push(allItems[7]._id);
+  console.log( `${users[1].username} - ${items[0]._id}, ${items[0].title}` );
+  users[1].items.push(items[0]._id);
+  console.log( `${users[1].username} - ${items[2]._id}, ${items[2].title}` );
+  users[1].items.push(items[2]._id);
+  console.log( `${users[1].username} - ${items[3]._id}, ${items[3].title}` );
+  users[1].items.push(items[3]._id);
+  console.log( `${users[1].username} - ${items[4]._id}, ${items[4].title}` );
+  users[1].items.push(items[4]._id);
+  console.log( `${users[1].username} - ${items[6]._id}, ${items[6].title}` );
+  users[1].items.push(items[6]._id);
+  console.log( `${users[1].username} - ${items[7]._id}, ${items[7].title}` );
+  users[1].items.push(items[7]._id);
   await users[1].save();
 
   // Assign items to David
-  console.log( `${users[3].username} - ${allItems[1]._id}, ${allItems[1].title}` );
-  users[3].items.push(allItems[1]._id);
-  console.log( `${users[3].username} - ${allItems[5]._id}, ${allItems[5].title}` );
-  users[3].items.push(allItems[5]._id);
+  console.log( `${users[3].username} - ${items[1]._id}, ${items[1].title}` );
+  users[3].items.push(items[1]._id);
+  console.log( `${users[3].username} - ${items[5]._id}, ${items[5].title}` );
+  users[3].items.push(items[5]._id);
   await users[3].save();
 
   console.log('Data Loaded!');

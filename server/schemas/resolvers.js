@@ -38,8 +38,8 @@ const resolvers = {
 	},
 
 	Mutation: {
-		addItem: async (parent, { title, description, imageURL, price }) => {
-			return Item.create({ title, description, imageURL, price });
+		addItem: async (parent, { title, description, imageURL, price, playerName, playerSoundex }) => {
+			return Item.create({ title, description, imageURL, price, playerName, playerSoundex });
 		},
 		addLeague: async (parent, { leagueInitials, leagueName, leagueLogo }) => {
 			return League.create({ leagueInitials, leagueName, leagueLogo });
