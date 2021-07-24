@@ -12,7 +12,7 @@ const resolvers = {
 		},
 
 		league: async (parent, { leagueId }) => {
-			return League.findOne({ _id: leagueId });
+			return League.findOne({ _id: leagueId }).populate('teams');
 		},
 		
 		leagueByInitials: async (parent, { initials }) => {
@@ -22,20 +22,19 @@ const resolvers = {
 		team: async () => {
 			return Team.find();
 		},
+
+		users: async () => {
+			return User.find().sort({ username: 1 }).populate('items');
+		},
 		
 		user: async (parent, { userId }) => {
-			return User.findOne({ _id: userId });
+			return User.findOne({ _id: userId }).populate('items');
 		},
 		
-		userByUserName: async (parent, { usrName }) => {
-			return League.findOne({ userName: usrName }).populate('items');
+		userByUserName: async (parent, { userName }) => {
+			return User.findOne({ username: userName }).populate('items');
 		},
 
-
-				
-		// leagueByTeamId: async (parent, { teamId }) => {
-		// 	return League.findOne({ team_id: teamId });
-		// }
 	},
 
 	Mutation: {
