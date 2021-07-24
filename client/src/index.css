@@ -25,27 +25,52 @@ h1 {
   font-family: 'Abril Fatface', cursive;
   font-size: 120px;
   margin: 10px;
-  text-shadow: 3px 3px #ffffff59;
+  text-shadow: 3px 3px #ffffff54;
 }
 
 .caroimage {
-  max-width: 800px;
-  border: white;
+  /* max-width: 800px; */
+  border: rgb(255, 255, 255);
   border-style: solid;
   border-radius: 10px;
 }
 
 .navtext {
-  color: white;
-  width: 240px;
+  color: rgb(255, 255, 255);
+  width: 200px;
   font-size: 25px;
+}
+
+#navtext {
+  color: white;
+}
+
+#basic-nav-dropdown {
+  color: white;
 }
 
 #tradernavbar {
   background-color: rgba(255, 255, 255, 0.425);
+  /* background-image: url('./assets/images/leather1.jpg'); */
+  background-size: cover;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
   margin-bottom: 20px;
   margin-top: 20px;
+  border-radius: 8px;
 }
+
+.signupcontainer {
+}
+
+#signlogbtn {
+background-color: red;
+margin: 15px;
+height: 60px;
+border:none;
+
+}
+
 
 #traderlogo {
   max-width: 100px;
@@ -70,4 +95,64 @@ P {
 
 .traderfooter {
   margin: 20px;
+}
+
+#item {
+  background-color: rgba(255, 255, 255, 0.397);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#itemimage {
+  max-width: 400px;
+}
+
+#offerh2 {
+  color: white;
+  margin: 20px;
+}
+
+#offertext {
+  width:400px;
+  height: 200px;
+  margin: 20px
+}
+
+#submitoffer {
+  background-color: white;
+  width: 100px;
+  margin: 50px;
+}
+
+#searchitem {
+  background-color: rgba(255, 255, 255, 0.719);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  max-width: 20%;
+  border-color: red;
+  border-style: solid;
+
+}
+
+#searchitemimage {
+  max-width: 90%;
+  margin: 10px;
+  border-color: red;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.searchheader {
+  color: white;
+}
+
+#searchitemdescription {
+color: black;
+}
+
+.carouseldiv {
+  margin: 60px;
+  margin-left: 200px;
+  max-width: 800px;
 }

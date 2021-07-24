@@ -13,11 +13,11 @@ function TraderNavbar () {
             <div className="col-md">
               <Navbar id="tradernavbar" expand="lg">
   <Container>
-    <Navbar.Brand className="navtext" href="#home">Trader Jocks</Navbar.Brand>
+    <Navbar.Brand id="navtext" className="navtext" href="#home">Trader Jocks</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link className="navtext" href="#home">Home</Nav.Link>
+        <Nav.Link id="navtext" className="navtext" href="#home">Home</Nav.Link>
         <NavDropdown className="navtext"title="League" id="basic-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">MLB</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">NBA</NavDropdown.Item>
@@ -45,6 +45,16 @@ function TraderNavbar () {
     </Navbar.Collapse>
   </Container>
 </Navbar>
+            </div>
+            <div className="col-md signupcontainer">
+              <Button id="signlogbtn">
+                Sign up
+              </Button>
+              <Button id="signlogbtn">
+                Login
+              </Button>
+
+
             </div>
             
           </div>
