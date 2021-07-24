@@ -52,7 +52,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addItem(title: String!, description: String!, imageUrl: String, price: String): Item
+    addItem(title: String!, description: String!, imageURL: String, price: String): Item
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
 	  addUser(username: String!, password: String!, email: String!): Auth
