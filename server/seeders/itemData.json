@@ -4,55 +4,63 @@
       "description": "US Open Tennis Ball Signed by Serena Williams",
       "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1623199700/preset_folder/dnkymftfjdm4druevzgq.jpg",
       "price": "$5,000.00",
-      "playerName": "Serena Williams"
+      "playerName": "Serena Williams",
+      "playerSoundex": " "
     },
     {
         "title": "2009 Tops Chrome",
         "description": "2009 Tops Chrome - James Harden",
         "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1622596834/preset_folder/hvdsybelryrpeuighrzd.jpg",
         "price": "$1,000.00",
-        "playerName": "James Harden"
+        "playerName": "James Harden",
+        "playerSoundex": " "
       },
       {
         "title": "Basketball",
         "description": "Basketball signed by Michael Jordan",
         "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1622590869/preset_folder/ljcyqpvc0vhmmknzfgx4.jpg",
         "price": "$3,000.00",
-        "playerName": "Michael Jordan"
+        "playerName": "Michael Jordan",
+        "playerSoundex": " "
       },
       {
         "title": "Jersey",
         "description": "Jersey signed by Heath Schuler",
         "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1622577791/preset_folder/i1uym8z4gsydtbwii2bv.jpg",
         "price": "$900.00",
-        "playerName": "Heath Schuler"
+        "playerName": "Heath Schuler",
+        "playerSoundex": " "
       },
       {
         "title": "Jersey",
         "description": "Jersey signed by Peyton Manning",
         "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1622577791/preset_folder/i1uym8z4gsydtbwii2bv.jpg",
         "price": "$4995.00",
-        "playerName": "Peyton Manning"
+        "playerName": "Peyton Manning",
+        "playerSoundex": " "
       },
       {
         "title": "2003/04 Topps Rookie",
         "description": "2003/04 Topps Rookie - Lebron James",
         "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1622516106/preset_folder/xpz6isahaxxa0qt5m48f.jpg",
         "price": "$500.00",
-        "playerName": "Lebron James"
+        "playerName": "Lebron James",
+        "playerSoundex": " "
       },
       {
         "title": "Jersey",
         "description": "Jersey signed by Odell Beckham",
         "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1622515758/preset_folder/hqzqgswge6lhoexkcwlz.jpg",
         "price": "$4500.00",
-        "playerName": "Odell Beckham"
+        "playerName": "Odell Beckham",
+        "playerSoundex": " "
       },
       {
         "title": "Baseball",
         "description": "Baseball signed by Derek Jeter",
         "imageURL": "https://res.cloudinary.com/dui0ghwal/image/upload/v1622498061/preset_folder/mrxcvn53zm5fyxgtm9ye.jpg",
         "price": "$2599.00",
-        "playerName": "Derek Jeter"
+        "playerName": "Derek Jeter",
+        "playerSoundex": " "
       }
 ]
