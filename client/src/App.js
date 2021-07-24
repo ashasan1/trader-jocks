@@ -4,6 +4,8 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home';
+import Item from './pages/Item'
+import Search from './pages/Search';
 import TraderNavbar from './components/TraderNavbar.js';
 import TraderJocksLogo from './components/TraderJocksLogo';
 import Header from './components/Header';
@@ -34,6 +36,8 @@ function App() {
           {/* <TraderJocksLogo /> */}   
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route exact path='/search' component={Search} />
+            <Route exact path='/item' component={Item} />
             <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
           </Switch>
           </>
