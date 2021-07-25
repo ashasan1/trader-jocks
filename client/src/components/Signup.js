@@ -16,7 +16,9 @@ const Signup = () => {
 
 	const handleSignUp = async (event) => {
 		event.preventDefault();
-		if (Form.checkValidity() === false) {
+
+		const form = event.currentTarget;
+		if (form.checkValidity() === false) {
 			event.preventDefault();
 			event.stopPropagation();
 		}
