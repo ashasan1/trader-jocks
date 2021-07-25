@@ -50,7 +50,7 @@ const typeDefs = gql`
   }
 
   type Auth {
-	  token: ID!
+	  token: String
 	  user: User
   }
 
@@ -63,7 +63,8 @@ const typeDefs = gql`
       playerSoundex: String): Item
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
-	  addUser(username: String!, password: String!, email: String!): Auth
+	 addUser(username: String!, password: String!, email: String!): Auth
+	 loginUser(username: String!, password: String!): Auth
     removeItem(itemId: ID!): Item
     removeLeague(leagueId: ID!): League
     removeTeam(leagueId: ID!, teamId: ID!): League
