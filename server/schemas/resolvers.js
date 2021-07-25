@@ -1,5 +1,7 @@
 
 const { Item, League, Team, User } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
 	Query: {
@@ -56,7 +58,7 @@ const resolvers = {
 				}
 			);
 		},
-		addUser: async (parent, { name, email, password }) => {
+		addUser: async (parent, { username, email, password }) => {
 			const newUser = await User.create({ username, email, password });
 			const token = signToken(newUser);
 			return { token, newUser };
@@ -76,6 +78,16 @@ const resolvers = {
 		},
 		removeUser: async (parent, { userId }) => {
 			return User.findOneAndDelete({ _id: userId });
+		},
+		loginUser: async (parent, { username, password }) => {
+			const user = await User.findOne({ username });
+			if (!user) throw new AuthenticationError('Incorrect Username');
+			const passwordCheck = await user.checkPassword(password);
+			if (!passwordCheck) throw new AuthenticationError('Incorrect Password');
+
+			// if it gets here, the user has entred a good username/password combo
+			const token = signToken(user);
+			return { token, user };
 		}
 	},
 };
