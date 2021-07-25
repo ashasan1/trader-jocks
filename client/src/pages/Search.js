@@ -1,6 +1,7 @@
 import React from 'react';
 // import Auth from '../utils/auth';
 import { Carousel, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom';
 import '../index.css'
 
 function Search() {
