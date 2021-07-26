@@ -43,6 +43,7 @@ const typeDefs = gql`
     users: [User]!
     user(userId: ID!): User
     userByUserName(userName: String!): User
+	 getCarouselItems: [Item]
   }
   type Auth {
 	  token: String
