@@ -11,6 +11,7 @@ import TraderNavbar from './components/TraderNavbar.js';
 import TraderJocksLogo from './components/TraderJocksLogo';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Upload from './pages/profileAddItem';
 import Signup from './components/Signup';
 
 const httpLink = createHttpLink({
@@ -45,6 +46,7 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route exact path='/search' component={Search} />
             <Route exact path='/item' component={Item} />
+            <Route exact path='/addItem' component={Upload} />
             <Route exact path='/Signup' component={Signup} />
             <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
           </Switch>
