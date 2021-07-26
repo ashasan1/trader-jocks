@@ -1,3 +1,4 @@
+require('dotenv').config(); 
 const db = require('../config/connection');
 const { Item, League, Team, User } = require('../models');
 const word = require('../utils/soundex');

@@ -23,3 +23,29 @@ export const LOGIN_USER = gql`
 		}
 	}
 `;
+
+
+export const ADD_ITEM = gql`
+	mutation addItem($title: String!, $description: String!, $imageURL: String, $price: String, $playerName: String, $playerSoundex: String) {
+		addItem (title: $title, description: $description, imageURL: $imageURL, price: $price, playerName: $playerName, playerSoundex: $playerSoundex) {
+		_id
+		title	
+		}
+	}
+
+`;
+
+export const ADD_ITEM_TO_USER = gql `
+	mutation addItemToUser($item_id: ID!) {
+		addItemToUser (item_id: $item_id) {
+		user {
+			_id
+			username
+			items {
+				_id 
+				}
+
+			}	
+		}
+	}
+`;

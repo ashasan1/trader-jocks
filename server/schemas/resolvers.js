@@ -2,6 +2,8 @@
 const { Item, League, Team, User } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
+var mongoose = require('mongoose');
+
 
 const resolvers = {
 	Query: {
@@ -40,8 +42,25 @@ const resolvers = {
 	},
 
 	Mutation: {
-		addItem: async (parent, { title, description, imageURL, price, playerName, playerSoundex }) => {
-			return Item.create({ title, description, imageURL, price, playerName, playerSoundex });
+		addItem: async (parent, { title, description, imageURL, price, playerName, playerSoundex}, context) => {
+			const newItem = await Item.create({ title, description, imageURL, price, playerName, playerSoundex });
+			console.log(`This is the newItem`, newItem);
+			// const newItemId = mongoose.Types.ObjectId(newItem._id);
+			const newItemId = newItem._id;
+			console.log(`This is the newItemId`, newItemId);
+			return User.findOneAndUpdate({_id: context.user._id},
+				{
+					// $addToSet: {items: {newItemId} }
+					$addToSet: {items: {"$toString": "$newItemId"} }
+					
+				}, {new: true})
+		},
+
+		addItemToUser: async(parent, {item_id}, context) => {
+			return User.findOneAndUpdate({_id: context.user._id},
+				{
+					$addToSet: {items: {item_id}}
+				})
 		},
 		addLeague: async (parent, { leagueInitials, leagueName, leagueLogo }) => {
 			return League.create({ leagueInitials, leagueName, leagueLogo });

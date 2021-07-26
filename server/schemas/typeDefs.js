@@ -11,7 +11,6 @@ const typeDefs = gql`
     playerSoundex: String
     team: Team
   }
-
   type League {
 		_id: ID
 		leagueInitials: String
@@ -20,7 +19,6 @@ const typeDefs = gql`
 		teams: [Team]!
 		createdAt: String
   }
-
   type Team {
     _id: ID
     teamCity: String
@@ -28,7 +26,6 @@ const typeDefs = gql`
     teamLogo: String
     createdAt: String
   }
-
   type User {
 		_id: ID
 		username: String
@@ -36,7 +33,6 @@ const typeDefs = gql`
 		items: [Item]!
 		createdAt: String
   }
-
   type Query {
     items: [Item]!
     leagues: [League]!
@@ -48,12 +44,10 @@ const typeDefs = gql`
     user(userId: ID!): User
     userByUserName(userName: String!): User
   }
-
   type Auth {
 	  token: String
 	  user: User
   }
-
   type Mutation {
     addItem(title: String!, 
       description: String!, 
@@ -61,6 +55,7 @@ const typeDefs = gql`
       price: String,
       playerName: String,
       playerSoundex: String): Item
+    addItemToUser(item_id: ID!): User
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
 	 addUser(username: String!, password: String!, email: String!): Auth
