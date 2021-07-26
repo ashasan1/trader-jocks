@@ -55,7 +55,7 @@ const typeDefs = gql`
       price: String,
       playerName: String,
       playerSoundex: String): Item
-    addItemToUser(item_id: ID!, user_id: ID!): User
+    addItemToUser(item_id: ID!): User
     addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
     addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
 	 addUser(username: String!, password: String!, email: String!): Auth
