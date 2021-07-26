@@ -43,8 +43,8 @@ const resolvers = {
 		addItem: async (parent, { title, description, imageURL, price, playerName, playerSoundex }) => {
 			return Item.create({ title, description, imageURL, price, playerName, playerSoundex });
 		},
-		addItemToUser: async(parent, {item_id, user_id}) => {
-			return User.findOneAndUpdate({_id: user_id},
+		addItemToUser: async(parent, {item_id}, context) => {
+			return User.findOneAndUpdate({_id: context.user._id},
 				{
 					$addToSet: {items: {item_id}}
 				})
