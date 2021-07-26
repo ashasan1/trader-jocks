@@ -34,3 +34,18 @@ export const ADD_ITEM = gql`
 	}
 
 `;
+
+export const ADD_ITEM_TO_USER = gql `
+	mutation addItemToUser($item_id: ID!) {
+		addItemToUser (item_id: $item_id) {
+		user {
+			_id
+			username
+			items {
+				_id 
+				}
+
+			}	
+		}
+	}
+`;
