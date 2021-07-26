@@ -43,6 +43,12 @@ const resolvers = {
 		addItem: async (parent, { title, description, imageURL, price, playerName, playerSoundex }) => {
 			return Item.create({ title, description, imageURL, price, playerName, playerSoundex });
 		},
+		addItemToUser: async(parent, {item_id, user_id}) => {
+			return User.findOneAndUpdate({_id: user_id},
+				{
+					$addToSet: {items: {item_id}}
+				})
+		},
 		addLeague: async (parent, { leagueInitials, leagueName, leagueLogo }) => {
 			return League.create({ leagueInitials, leagueName, leagueLogo });
 		},
