@@ -43,25 +43,23 @@ const resolvers = {
 
 	Mutation: {
 		addItem: async (parent, { title, description, imageURL, price, playerName, playerSoundex}, context) => {
-			const newItem = await Item.create({ title, description, imageURL, price, playerName, playerSoundex });
-			console.log(`This is the newItem`, newItem);
-			// const newItemId = mongoose.Types.ObjectId(newItem._id);
-			const newItemId = newItem._id;
-			console.log(`This is the newItemId`, newItemId);
-			return User.findOneAndUpdate({_id: context.user._id},
-				{
-					// $addToSet: {items: {newItemId} }
-					$addToSet: {items: {"$toString": "$newItemId"} }
-					
-				}, {new: true})
+			try {
+				const newItem = await Item.create({ title, description, imageURL, price, playerName, playerSoundex });
+				const newItemId = newItem._id;
+				const updatedUser = await User.findOne({_id: context.user._id})
+				updatedUser.items.push(newItemId);
+				await updatedUser.save();
+				return updatedUser; 
+			} catch(err) {
+				console.log(err);
+			}
 		},
-
-		addItemToUser: async(parent, {item_id}, context) => {
-			return User.findOneAndUpdate({_id: context.user._id},
-				{
-					$addToSet: {items: {item_id}}
-				})
-		},
+		// addItemToUser: async(parent, {item_id}, context) => {
+		// 	return User.findOneAndUpdate({_id: context.user._id},
+		// 		{
+		// 			$addToSet: {items: {item_id}}
+		// 		})
+		// },
 		addLeague: async (parent, { leagueInitials, leagueName, leagueLogo }) => {
 			return League.create({ leagueInitials, leagueName, leagueLogo });
 		},
