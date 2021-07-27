@@ -1,5 +1,5 @@
 
-const { Item, League, Team, User } = require('../models');
+const { Category, Item, League, Team, User } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 var mongoose = require('mongoose');
@@ -7,6 +7,10 @@ var mongoose = require('mongoose');
 
 const resolvers = {
 	Query: {
+		categories: async () => {
+			return Category.find().sort({ name: 1 });
+		},
+
 		items: async () => {
 			return Item.find().sort({ title: 1 });
 		},
@@ -79,6 +83,9 @@ const resolvers = {
 			const newUser = await User.create({ username, email, password });
 			const token = signToken(newUser);
 			return { token, newUser };
+		},
+		removeCategory: async (parent, { categoryId }) => {
+			return Category.findOneAndDelete({ _id: categoryId });
 		},
 		removeItem: async (parent, { itemId }) => {
 			return Item.findOneAndDelete({ _id: itemId });

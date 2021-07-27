@@ -43,6 +43,7 @@ const typeDefs = gql`
 		createdAt: String
   }
   type Query {
+    categories: [Category]!
     items: [Item]!
     leagues: [League]!
     league(leagueId: ID!): League
