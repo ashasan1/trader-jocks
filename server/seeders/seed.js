@@ -1,8 +1,9 @@
 require('dotenv').config(); 
 const db = require('../config/connection');
-const { Item, League, Team, User } = require('../models');
+const { Category, Item, League, Team, User } = require('../models');
 const word = require('../utils/soundex');
 
+const categoryData = require('./categoryData.json');
 const itemData = require('./itemData.json');
 const leagueData = require('./leagueData.json');
 const teamData = require('./teamData.json');
@@ -10,16 +11,69 @@ const userData = require('./userData.json');
 
 db.once('open', async () => {
   // Clear the database
+  await Category.deleteMany({});
   await Item.deleteMany({});
   await League.deleteMany({});
   await Team.deleteMany({});
   await User.deleteMany({});
 
   // Bulk Load the database
-  const items = await Item.insertMany(itemData)
+  const categories = await Category.insertMany(categoryData);
+  const items = await Item.insertMany(itemData);
   const leagues = await League.insertMany(leagueData);
   const teams = await Team.insertMany(teamData);
-  const users = await User.insertMany(userData)
+  const users = await User.insertMany(userData);
+
+  // Assign subcategories to categories
+  for (newCategory of categories) {
+    switch (newCategory.name) {
+      case 'Card':
+        console.log( `${newCategory.name} - Player` );
+        newCategory.subcategories.push("Player");
+        console.log( `${newCategory.name} - Rookie` );
+        newCategory.subcategories.push("Rookie");
+        await newCategory.save();
+        break;
+      case "Miscellaneious":
+        console.log( `${newCategory.name} - Program` );
+        newCategory.subcategories.push("Program");
+        console.log( `${newCategory.name} - Roster` );
+        newCategory.subcategories.push("Roster");
+        console.log( `${newCategory.name} - Ticket` );
+        newCategory.subcategories.push("Ticket");
+        await newCategory.save();
+        break;
+      case "Picture":
+        console.log( `${newCategory.name} - Picture` );
+        newCategory.subcategories.push("Picture");
+        await newCategory.save();
+        break;
+      case "Sports Equipment": 
+        console.log( `${newCategory.name} - Baseball Bat` );
+        newCategory.subcategories.push("Baseball Bat");
+        console.log( `${newCategory.name} - Baseball Glove` );
+        newCategory.subcategories.push("Baseball Glove");
+        console.log( `${newCategory.name} - Baseball` );
+        newCategory.subcategories.push("Baseball");
+        console.log( `${newCategory.name} - Football` );
+        newCategory.subcategories.push("Football");
+        await newCategory.save();
+        break;
+      case "Uniform":
+        console.log( `${newCategory.name} - Cap` );
+        newCategory.subcategories.push("Cap");
+        console.log( `${newCategory.name} - Helmet` );
+        newCategory.subcategories.push("Helmet");
+        console.log( `${newCategory.name} - Jersey` );
+        newCategory.subcategories.push("Jersey");
+        console.log( `${newCategory.name} - Shoes` );
+        newCategory.subcategories.push("Shoes");
+        console.log( `${newCategory.name} - Shorts` );
+        newCategory.subcategories.push("Shorts");
+        await newCategory.save();
+        break;
+    }
+  }
 
   // Assign teams to leagues
   for (newLeague of leagues) {

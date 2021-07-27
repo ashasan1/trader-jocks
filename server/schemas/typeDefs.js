@@ -1,6 +1,15 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
+  type Category {
+    _id: ID
+    name: String
+    subcategories: [
+      {
+        description: String
+      }
+    ]
+  }
   type Item {
 		_id: ID
 		title: String
@@ -34,6 +43,7 @@ const typeDefs = gql`
 		createdAt: String
   }
   type Query {
+    categories: [Category]!
     items: [Item]!
     leagues: [League]!
     league(leagueId: ID!): League
@@ -43,6 +53,7 @@ const typeDefs = gql`
     users: [User]!
     user(userId: ID!): User
     userByUserName(userName: String!): User
+	 getCarouselItems: [Item]
   }
   type Auth {
 	  token: String
@@ -50,19 +61,28 @@ const typeDefs = gql`
   }
   type Mutation {
     addItem(title: String!, 
-      description: String!, 
-      imageURL: String, 
-      price: String,
-      playerName: String,
-      playerSoundex: String): Item
+            description: String!, 
+            imageURL: String, 
+            price: String,
+            playerName: String,
+            playerSoundex: String): Item
     addItemToUser(item_id: ID!): User
-    addLeague(leagueIntials: String!, leagueName: String!, leagueLogo: String): League
-    addTeam(leagueId: ID!, teamCity: String!, teamName: String!, teamLogo: String!): League
-	 addUser(username: String!, password: String!, email: String!): Auth
-	 loginUser(username: String!, password: String!): Auth
+    addLeague(leagueIntials: String!, 
+              leagueName: String!, 
+              leagueLogo: String): League
+    addTeam(leagueId: ID!, 
+            teamCity: String!, 
+            teamName: String!, 
+            teamLogo: String!): League
+	  addUser(username: String!, 
+            password: String!, 
+            email: String!): Auth
+	  loginUser(username: String!, 
+              password: String!): Auth
     removeItem(itemId: ID!): Item
     removeLeague(leagueId: ID!): League
-    removeTeam(leagueId: ID!, teamId: ID!): League
+    removeTeam(leagueId: ID!, 
+               teamId: ID!): League
     removeUser(userId: ID!): User
   }
 `;

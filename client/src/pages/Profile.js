@@ -9,15 +9,15 @@ import {
   Card,
   CardColumns,
 } from "react-bootstrap";
-import { Redirect } from "react-router-dom";
 import "../index.css";
-import axios from "axios";
+
 
 function UserProfile() {
 
-    // const GetItemData = {
-    //     query: {}
-    // }
+const { gql } = require('apollo-server-express');
+const GetItemData = {
+        query: {}
+    }
 
     
   return (
@@ -40,6 +40,9 @@ function UserProfile() {
             <p id="searchitemdescription">
               {" "}
               Micheal Jordan Basketball signed in 2006
+            </p>
+            <p>
+              Price:  
             </p>
           </div>
 
