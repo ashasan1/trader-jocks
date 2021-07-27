@@ -62,7 +62,8 @@ function Upload() {
     };
 
     return (
-        <div>
+        <div className="container additemholder">
+            <div>
         <h1 className="title">Upload an Image</h1>
                
         <form onSubmit={submitItemForm} className="form">
@@ -82,16 +83,16 @@ function Upload() {
                 className="form-input"
                 
             />
-            <label htmlFor="floatingInput">Title</label>
+            <label id= "labeltext" htmlFor="floatingInput">Title</label>
 			<input type="text" className="form-control" id="title"  name="title" placeholder="Title of your Item"/>
 
-            <label htmlFor="floatingInput">Player Name</label>
+            <label id= "labeltext" htmlFor="floatingInput">Player Name</label>
 			<input type="text" className="form-control" id="playerName" name="playerName" placeholder="Joe Smith"/>
 			
-            <label htmlFor="floatingInput">Description</label>
+            <label id= "labeltext" htmlFor="floatingInput">Description</label>
 			<input type="text" className="form-control" id="itemDescription" name="itemDescription" placeholder="Rookie Card"/>
 			
-            <label htmlFor="floatingInput">Price</label>
+            <label id= "labeltext" htmlFor="floatingInput">Price</label>
 			<input type="text" className="form-control" id="itemPrice" name="itemPrice" placeholder="5000"/>
 			            
         </div>	
@@ -103,6 +104,8 @@ function Upload() {
         </form>
         
     </div>
+        </div>
+        
     );
 }
 

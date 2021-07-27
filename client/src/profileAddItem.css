@@ -99,3 +99,20 @@ img {
     background-color: var(--alert-danger-bg-color);
     color: var(--alert-danger-text-color);
 }
+
+#title, #playerName, #itemDescription, #itemPrice {
+    width: 400px;
+}
+
+.additemholder {
+background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+border-color: white;
+border-style: solid;
+}
+
+#labeltext {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
