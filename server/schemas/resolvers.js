@@ -42,7 +42,9 @@ const resolvers = {
 		userByUserName: async (parent, { userName }) => {
 			return User.findOne({ username: userName }).populate('items');
 		},
-
+		getCarouselItems: async () => {
+			return Item.find().sort({createdAt:-1}).limit(5);
+		}
 	},
 
 	Mutation: {
