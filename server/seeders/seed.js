@@ -1,8 +1,9 @@
 require('dotenv').config(); 
 const db = require('../config/connection');
-const { Item, League, Team, User } = require('../models');
+const { Category, Item, League, Team, User } = require('../models');
 const word = require('../utils/soundex');
 
+const categoryData = require('./categoryData.json');
 const itemData = require('./itemData.json');
 const leagueData = require('./leagueData.json');
 const teamData = require('./teamData.json');
@@ -10,16 +11,18 @@ const userData = require('./userData.json');
 
 db.once('open', async () => {
   // Clear the database
+  await Category.deleteMany({});
   await Item.deleteMany({});
   await League.deleteMany({});
   await Team.deleteMany({});
   await User.deleteMany({});
 
   // Bulk Load the database
-  const items = await Item.insertMany(itemData)
+  const categories = await Category.insertMany(categoryData);
+  const items = await Item.insertMany(itemData);
   const leagues = await League.insertMany(leagueData);
   const teams = await Team.insertMany(teamData);
-  const users = await User.insertMany(userData)
+  const users = await User.insertMany(userData);
 
   // Assign teams to leagues
   for (newLeague of leagues) {

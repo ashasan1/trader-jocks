@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Card",
+        "subcategories": [
+            {
+                "description": "Player"
+            },
+            {
+                "description": "Rookie"
+            }
+        ]
+    },
+    {
+        "name": "Miscellaneious",
+        "subcategories": [
+            {
+                "description": "Program"
+            },
+            {
+                "description": "Roster"
+            },
+            {
+                "description": "Ticket"
+            }
+        ]
+    },
+    {
+        "name": "Picture",
+        "subcategories": [
+            {
+                "description": "Picture"
+            }
+        ]
+    },
+    {
+        "name": "Sports Equipment",
+        "subcategories": [
+            {
+                "description": "Baseball Bat"
+            },
+            {
+                "description": "Baseball Glove"
+            },
+            {
+                "description": "Baseball"
+            },
+            {
+                "description": "Football"
+            }
+        ]
+    },
+    {
+        "name": "Uniform",
+        "subcategories": [
+            {
+                "description": "Cap"
+            },
+            {
+                "description": "Helmet"
+            },
+            {
+                "description": "Jersey"
+            },
+            {
+                "description": "Shoes"
+            },
+            {
+                "description": "Shorts"
+            }
+        ]
+    }
+]
