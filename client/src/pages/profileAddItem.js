@@ -3,7 +3,7 @@ import Axios from 'axios'; //library to allow the https request to the cloudinar
 import '../../src/profileAddItem.css';
 // import {Form, Button, Alert} from 'react-bootstrap';
 import {useMutation } from '@apollo/client';
-import {ADD_ITEM, ADD_ITEM_TO_USER} from '../utils/mutations';
+import {ADD_ITEM} from '../utils/mutations';
 const word = require('../utils/soundex');
 
 
@@ -12,7 +12,6 @@ function Upload() {
     const [imageURL, setImageURL] = useState('');
     const [previewSource, setPreviewSource] = useState('');
     const [ addItem, { error }] = useMutation(ADD_ITEM);
-    const [ addItemToUser, { error2 }] = useMutation(ADD_ITEM_TO_USER);
 
     const submitItemForm = async (event) => {
         event.preventDefault();
@@ -26,10 +25,7 @@ function Upload() {
         }
         try {
             let {data} = await addItem({ variables: {...addItemFormData}});
-            console.log(data);
-            // data = await addItemToUser({ variables: {item_id: data._id}});
-            // console.log(data);
-            
+                                    
         } catch(err) {
 		  console.log(err);
 
@@ -51,7 +47,7 @@ function Upload() {
     };
     
     const uploadImage = (file) => {
-        // console.log(files[0]);
+        
         const formData = new FormData() 
         formData.append("file", file);
         formData.append("upload_preset", "trader_jocks_V2_preset" );
@@ -60,7 +56,6 @@ function Upload() {
         "https://api.cloudinary.com/v1_1/dui0ghwal/image/upload", 
         formData
         ).then((response)=> {
-        console.log(response.data.secure_url);
         setImageURL(response.data.secure_url);
 
         });
