@@ -169,3 +169,24 @@ color: black;
 #modaltext {
   color: white;
 }
+
+.profileheader {
+  background-color: rgba(255, 255, 255, 0.459);
+border-radius: 10px;
+border-color: white;
+border-style: solid;
+}
+
+
+#profileitem {
+  background-color: black;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 400px;
+  margin: 10px;
+}
+
+#profileh1 {
+margin: 10px;
+font-size: 60px;
+}
