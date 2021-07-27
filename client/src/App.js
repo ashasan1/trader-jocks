@@ -7,6 +7,7 @@ import './App.css';
 import Home from './pages/Home';
 import Item from './pages/Item'
 import Search from './pages/Search';
+import Profile from './pages/Profile';
 import TraderNavbar from './components/TraderNavbar.js';
 import TraderJocksLogo from './components/TraderJocksLogo';
 import Header from './components/Header';
@@ -46,6 +47,7 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route exact path='/search' component={Search} />
             <Route exact path='/item' component={Item} />
+            <Route exact path='/profile' component={Profile} />
             <Route exact path='/addItem' component={Upload} />
             <Route exact path='/Signup' component={Signup} />
             <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
