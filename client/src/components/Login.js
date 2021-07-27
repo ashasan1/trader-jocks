@@ -3,6 +3,7 @@ import {Form, Button, Alert} from 'react-bootstrap';
 import {useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import '../index.css'
 
 const Login = () => {
 	const [userFormData, setUserFormData] = useState({ username: '', password: ''});
@@ -34,12 +35,12 @@ const Login = () => {
 		<>
 			<Form onSubmit={handleFormSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>User Name</Form.Label>
+              <Form.Label id="modaltext">User Name</Form.Label>
               <Form.Control type="text" placeholder="Enter User Name" name="username" onChange={handleInputChange} />
            </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
+              <Form.Label id="modaltext">Password</Form.Label>
               <Form.Control type="password" placeholder="Password" name="password" onChange={handleInputChange} />
             </Form.Group>
             <Button variant="primary" type="submit">
