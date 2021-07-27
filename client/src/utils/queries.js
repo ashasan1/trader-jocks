@@ -32,6 +32,8 @@ import gql from 'graphql-tag';
 
 
  export const ITEMS_SOUNDEX = gql`
+ # need to add where clause
+ 
  {
 	 query getItemsByPlayerSoundex {
 		 items {
