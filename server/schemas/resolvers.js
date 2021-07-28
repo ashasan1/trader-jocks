@@ -43,7 +43,13 @@ const resolvers = {
 			return User.findOne({ username: userName }).populate('items');
 		},
 		getCarouselItems: async () => {
-			return Item.find().sort({createdAt:-1}).limit(5);
+			return Item.find().sort({ createdAt: -1}).limit(5);
+		},
+		getUserItems: async (parent, { userId }) => {
+			return User.findOne({ _id: userId }).populate('items');
+		},
+		getItemsByPlayerSoundex: async (parent, { playerSoundex }) => {
+			return Item.find({ playerSoundex: playerSoundex }).sort({ createdAt: -1 })
 		}
 	},
 

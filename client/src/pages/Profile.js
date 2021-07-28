@@ -1,42 +1,16 @@
-import React from "react";
-import { useQuery, gql } from "@apollo/client";
-// import queries, { USER_ITEMS } from '../utils/queries'
-
-import {
-  Carousel,
-  Container,
-  Col,
-  Form,
-  Button,
-  Card,
-  CardColumns,
-} from "react-bootstrap";
+import React, {useState} from "react";
+import { useQuery } from "react-query";
+import { gql } from '@apollo/client'
 import "../index.css";
+import { USER_ITEMS } from "../utils/queries";
+  
 
-const USER_ITEMS = gql`
-  {
-    query
-    getUserItems {
-      user {
-        _id:
-        username
-        items {
-          title
-          description
-          imageURL
-          price
-          playerName
-          playerSoundex
-        }
-        createdAt
-      }
-    }
-  }
-`;
+
+
 
 function UserProfile() {
   const { data } = useQuery(USER_ITEMS);
-
+ 
   return (
     <>
       <div>
@@ -50,13 +24,13 @@ function UserProfile() {
           </div>
 
           <div id="searchitem">
-            <img id="searchitemimage" src={data}></img>
+            <img id="searchitemimage" src={data.getUserItems.user}></img>
             <p id="searchitemdescription">{data}</p>
             <p>Price:{data}</p>
           </div>
         </div>
       </div>
-    </>
+    // </>
   );
 }
 
