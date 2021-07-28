@@ -10,13 +10,13 @@ import gql from 'graphql-tag';
 `;
 
 	export const USER_ITEMS = gql`
+	query getUserItems($userId: ID!)
 	{
-		query getUserItems {
+		getUserItems(_id: $userId) {
 			user {
 			_id
 			username
 			items {
-				# _id
 				title
 				description
 				imageURL
@@ -32,12 +32,11 @@ import gql from 'graphql-tag';
 
 
  export const ITEMS_SOUNDEX = gql`
- # need to add where clause
+  query getItemsByPlayerSoundex($playerSoundex: String!)	
  
  {
-	 query getItemsByPlayerSoundex {
+	 getItemsByPlayerSoundex(playerSoundex: $playerSoundex) {
 		 items {
-			 # _id
 			 title
 			 description
 			 imageURL
