@@ -18,10 +18,9 @@ const USER_ITEMS = gql`
     query
     getUserItems {
       user {
-        _id
+        _id:
         username
         items {
-          # _id
           title
           description
           imageURL
@@ -51,7 +50,7 @@ function UserProfile() {
           </div>
 
           <div id="searchitem">
-            <img id="searchitemimage" src={data.getUserItems.user.items.imageURL}></img>
+            <img id="searchitemimage" src={data}></img>
             <p id="searchitemdescription">{data}</p>
             <p>Price:{data}</p>
           </div>

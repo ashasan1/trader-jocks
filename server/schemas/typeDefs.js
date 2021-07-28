@@ -4,11 +4,6 @@ const typeDefs = gql`
   type Category {
     _id: ID
     name: String
-    subcategories: [
-      {
-        description: String
-      }
-    ]
   }
 
   type Item {
@@ -80,6 +75,7 @@ const typeDefs = gql`
             email: String!): Auth
 	  loginUser(username: String!, 
               password: String!): Auth
+    removeCategory(categoryId: ID!): Category          
     removeItem(itemId: ID!): Item
     removeLeague(leagueId: ID!): League
     removeTeam(leagueId: ID!, 
