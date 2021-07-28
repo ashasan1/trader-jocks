@@ -33,6 +33,7 @@ h1 {
   border: rgb(255, 255, 255);
   border-style: solid;
   border-radius: 10px;
+  max-width: 400px;
 }
 
 .navtext {

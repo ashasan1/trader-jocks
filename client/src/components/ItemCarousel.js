@@ -1,8 +1,9 @@
 import React from 'react';
+import { useQuery } from '@apollo/client';
 import { Carousel } from 'react-bootstrap';
 import { CAROUSEL_ITEMS } from '../utils/queries';
 
-function itemCarousel() {
+const ItemCarousel = () => {
 	const { loading, data } = useQuery(CAROUSEL_ITEMS);
 
 	if (loading) {
@@ -16,12 +17,12 @@ function itemCarousel() {
 					<div>
 						<div className="col-md carouseldiv">
 							<Carousel>
-								{ data.getCarouselItems.map((carouselItem) => {
+								{data.getCarouselItems.map((carouselItem) => {
 									return (
-										<Carousel.Item>
+										<Carousel.Item key={carouselItem._id}>
 											<img
 												className="d-block w-100 caroimage"
-												src="{carouselItem.imageURL}"
+												src={carouselItem.imageURL}
 												alt="First slide"
 											/>
 										</Carousel.Item>
@@ -34,6 +35,6 @@ function itemCarousel() {
 			</div>
 		</>
 	);
-}
+};
 
-export default itemCarousel;
+export default ItemCarousel;
