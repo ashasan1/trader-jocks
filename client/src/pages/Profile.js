@@ -1,5 +1,7 @@
 import React from "react";
-// import Auth from '../utils/auth';
+import { useQuery, gql } from "@apollo/client";
+// import queries, { USER_ITEMS } from '../utils/queries'
+
 import {
   Carousel,
   Container,
@@ -11,15 +13,31 @@ import {
 } from "react-bootstrap";
 import "../index.css";
 
+const USER_ITEMS = gql`
+  {
+    query
+    getUserItems {
+      user {
+        _id
+        username
+        items {
+          # _id
+          title
+          description
+          imageURL
+          price
+          playerName
+          playerSoundex
+        }
+        createdAt
+      }
+    }
+  }
+`;
 
 function UserProfile() {
+  const { data } = useQuery(USER_ITEMS);
 
-const { gql } = require('apollo-server-express');
-const GetItemData = {
-        query: {}
-    }
-
-    
   return (
     <>
       <div>
@@ -33,91 +51,9 @@ const GetItemData = {
           </div>
 
           <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
-            <p>
-              Price:  
-            </p>
-          </div>
-
-          <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
-          </div>
-
-          <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
-          </div>
-
-          <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
-          </div>
-
-          <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
-          </div>
-          <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
-          </div>
-          <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
-          </div>
-          <div id="searchitem">
-            <img
-              id="searchitemimage"
-              src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"
-            ></img>
-            <p id="searchitemdescription">
-              {" "}
-              Micheal Jordan Basketball signed in 2006
-            </p>
+            <img id="searchitemimage" src={data.getUserItems.user.items.imageURL}></img>
+            <p id="searchitemdescription">{data}</p>
+            <p>Price:{data}</p>
           </div>
         </div>
       </div>

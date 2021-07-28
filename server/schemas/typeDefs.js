@@ -10,6 +10,7 @@ const typeDefs = gql`
       }
     ]
   }
+
   type Item {
 		_id: ID
 		title: String
