@@ -9,6 +9,18 @@ import gql from 'graphql-tag';
 	}
 `;
 
+export const GET_ITEMS = gql`
+	query items {
+		items {
+			_id
+			title
+			description
+			imageURL
+			price
+		}
+	}
+`;
+
 	export const USER_ITEMS = gql`
 	query getUserItems($userId: ID!)
 	{
