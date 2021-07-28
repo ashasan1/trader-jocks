@@ -8,8 +8,10 @@ function Profile() {
   return (
         <>
         <div className="container profileheader">
-            <h1 id="profileh1">My Profile</h1>
-            <h2>Welcome User ______!</h2>
+            <div className="profileheadercontainer">
+                 <h1 id="profileh1">My Profile</h1>
+            </div>
+           
 
             <div className="container">
                 <h1 id="profileh1">My Items</h1>
@@ -19,30 +21,40 @@ function Profile() {
                     <div className="row">
 
                     <div className="container" id="profileitem">
-                 <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
-                 <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
-                </div>
+                        <div className="row">
+                            <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
+                         <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
+                        </div>
+                     </div>
+                     
 
-                <div className="container" id="profileitem">
-                 <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
-                 <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
-                </div>
+                     <div className="container" id="profileitem">
+                        <div className="row">
+                            <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
+                         <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
+                        </div>
+                     </div>
 
-                <div className="container" id="profileitem">
-                 <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
-                 <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
-                </div>
+                     <div className="container" id="profileitem">
+                        <div className="row">
+                            <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
+                         <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
+                        </div>
+                     </div>
 
-                <div className="container" id="profileitem">
-                 <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
-                 <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
-                </div>
+                     <div className="container" id="profileitem">
+                        <div className="row">
+                            <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
+                         <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
+                        </div>
+                     </div>
 
-                <div className="container" id="profileitem">
-                 <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
-                 <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
-                </div>
-
+                 <div className="container" id="profileitem">
+                        <div className="row">
+                            <img id="profileitemimage" src="https://image.shutterstock.com/image-photo/soccer-ball-isolated-on-white-260nw-129557066.jpg"></img>
+                         <p id="profileitemdescription"> Micheal Jordan Basketball signed in 2006</p>
+                        </div>
+                     </div>
                 
 
 
