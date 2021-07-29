@@ -6,9 +6,33 @@ import { ADD_ITEM } from "../utils/mutations";
 const word = require("../utils/soundex");
 
 function Upload() {
+<<<<<<< HEAD
+    // const [fileInputState, setFileInputState] = useState('');
+    const [imageURL, setImageURL] = useState('');
+    const [previewSource, setPreviewSource] = useState('');
+    const [ addItem, { error }] = useMutation(ADD_ITEM);
+
+    const submitItemForm = async (event) => {
+        event.preventDefault();
+        const addItemFormData = {
+            title: event.target[1].value,
+            description: event.target[3].value,
+            imageURL: imageURL, 
+            price: event.target[4].value,
+            playerName: event.target[2].value,
+            playerSoundex: word.soundex(event.target[2].value)
+        }
+        try {
+            let {data} = await addItem({ variables: {...addItemFormData}});
+            window.location.href = "/profile";
+                                
+        } catch(err) {
+		  console.log(err);
+=======
   const [imageURL, setImageURL] = useState("");
   const [previewSource, setPreviewSource] = useState("");
   const [addItem, { error }] = useMutation(ADD_ITEM);
+>>>>>>> 606cf8830cef69378e1e51192108175d254cffab
 
   const submitItemForm = async (event) => {
     event.preventDefault();
@@ -120,7 +144,7 @@ function Upload() {
               placeholder="5000"
             />
           </div>
-          <button className="btn" type="submit">
+          <button id="submitbtn" className="btn" type="submit">
             Submit Item
           </button>
         </form>
