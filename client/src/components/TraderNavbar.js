@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Carousel, Container, Col, Form, Button, Card, CardColumns, Navbar, NavDropdown, Nav, Modal, Tab } from 'react-bootstrap';
+import { Carousel, Container, Col, Form, FormControl, Button, Card, CardColumns, Navbar, NavDropdown, Nav, Modal, Tab } from 'react-bootstrap';
 import '../index.css'
 import { useHistory } from 'react-router-dom';
 import Signup from './Signup';
@@ -24,40 +24,30 @@ function TraderNavbar() {
 								<Navbar.Toggle aria-controls="basic-navbar-nav" />
 								<Navbar.Collapse id="basic-navbar-nav">
 									<Nav className="me-auto">
-										<Nav.Link id="navtext" className="navtext" href="#home">Home</Nav.Link>
-										<NavDropdown className="navtext" title="League" id="basic-nav-dropdown">
-											<NavDropdown.Item href="#action/3.1">MLB</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.2">NBA</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.4">NFL</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.5">NHL</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.6">WBA</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.7">WNBA</NavDropdown.Item>
-											<NavDropdown.Divider />
-										</NavDropdown>
-										<NavDropdown className="navtext" title="Team" id="basic-nav-dropdown">
-											<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-											<NavDropdown.Divider />
-											<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-										</NavDropdown>
-										<NavDropdown className="navtext" title="Item" id="basic-nav-dropdown">
-											<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-											<NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-											<NavDropdown.Divider />
-											<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-										</NavDropdown>
+									<Nav.Link id="navtext" href="#home">Home</Nav.Link>
+									<Form className="d-flex">
+										<FormControl
+										id="navsearchbar"
+										type="search"
+										placeholder="Search Player Name"
+										className="mr-2"
+										aria-label="Search"
+										/>
+										<Button id="searchbutton" variant="outline-success">Search</Button>
+										</Form>
+									
+										
 										{Auth.loggedIn() ? (
 											<>
-												<Nav.Link onClick={Auth.logout} className="navtext">Logout</Nav.Link>
+												<Nav.Link onClick={Auth.logout} id="navtext">Logout</Nav.Link>
 											</>
 										) : (
 											<>
-												<Nav.Link onClick={() => setShowModal(true)} className="navtext">Login/Sign Up</Nav.Link>
+												<Nav.Link onClick={() => setShowModal(true)} id="navtext">Login/Sign Up</Nav.Link>
 											</>
 										)}
 									</Nav>
+									
 								</Navbar.Collapse>
 							</Container>
 						</Navbar>

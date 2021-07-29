@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Carousel } from 'react-bootstrap';
+import '../index.css'
 import { CAROUSEL_ITEMS } from '../utils/queries';
 
 const ItemCarousel = () => {
