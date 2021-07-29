@@ -33,6 +33,7 @@ h1 {
   border: rgb(255, 255, 255);
   border-style: solid;
   border-radius: 10px;
+  max-width: 400px;
 }
 
 .navtext {
@@ -58,9 +59,6 @@ h1 {
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 8px;
-}
-
-.signupcontainer {
 }
 
 #signlogbtn {
@@ -136,7 +134,8 @@ P {
 }
 
 #searchitemimage {
-  max-width: 90%;
+  max-width: 5px;
+  max-height: 5px;
   margin: 10px;
   border-color: red;
   border-style: solid;

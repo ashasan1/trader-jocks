@@ -11,8 +11,7 @@ export const CAROUSEL_ITEMS = gql`
 
 export const USER_ITEMS = gql`
   query getUserItems($userId: ID!) {
-    getUserItems(_id: $userId) {
-      user {
+    getUserItems(userId: $userId) {
         _id
         username
         items {
@@ -26,7 +25,6 @@ export const USER_ITEMS = gql`
         createdAt
       }
     }
-  }
 `;
 
 export const ITEMS_SOUNDEX = gql`
