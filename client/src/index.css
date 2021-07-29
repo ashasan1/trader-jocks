@@ -44,7 +44,7 @@ h1 {
   color: rgb(255, 255, 255);
   width: 200px;
   font-size: 25px;
-  margin-right: 5px;
+  margin-right: 200px;
 
 }
 
@@ -213,4 +213,10 @@ color: black;
   border-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-right: 30px;
+}
+
+#additem {
+  background-color: black;
+  width: 200px;
+  border-color: white;
 }

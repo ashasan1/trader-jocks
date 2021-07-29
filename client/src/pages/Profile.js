@@ -14,7 +14,17 @@ function Profile() {
            
 
             <div className="container">
-                <h1 id="profileh1">My Items</h1>
+                <div className="row">
+                    <div className="col-md">
+                        <h1 id="profilemyitems">My Items</h1>
+                    </div>
+                    <div className="col-md">
+                        <Button href="/additem" id="additem">Add Item</Button>
+                    </div>
+                
+
+                </div>
+                
                 </div>
 
                 <div className="container">

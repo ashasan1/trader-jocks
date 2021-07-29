@@ -25,7 +25,8 @@ function Upload() {
         }
         try {
             let {data} = await addItem({ variables: {...addItemFormData}});
-                                    
+            window.location.href = "/profile";
+                                
         } catch(err) {
 		  console.log(err);
 
@@ -98,7 +99,7 @@ function Upload() {
         </div>	
           
             
-            <button className="btn" type="submit">
+            <button id="submitbtn" className="btn" type="submit">
                 Submit Item
             </button>
         </form>
