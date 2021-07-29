@@ -15,6 +15,10 @@ const resolvers = {
 			return Item.find().sort({ title: 1 });
 		},
 
+		getSearchItems: async (parent, { searchCriteria }) => {
+			return Item.find({ playerSoundex: searchCriteria}).sort({ createdAt: -1 });
+		},
+
 		leagues: async () => {
 			return League.find().sort({ leagueInitials: 1 }).populate('teams');
 		},
