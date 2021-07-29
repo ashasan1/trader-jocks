@@ -37,17 +37,35 @@ function UserProfile() {
 
   return (
     <>
-      <div>
-        <h1>My Items</h1>
-      </div>
+
+<div className="container profileheader">
+ 
+            <div className="profileheadercontainer">
+                 <h1 id="profileh1">My Profile</h1>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md">
+                        <h1 id="profilemyitems">My Items</h1>
+                    </div>
+                    <div className="col-md">
+                        <Button href="/additem" id="additem">Add Item</Button>
+                    </div>
+                
+
+                </div>
+                
+                </div>
+
+
       <div className="container">
         <div className="row">
           <div>
             <h3 className="searchheader">Items</h3>
           </div>
 
-          <div>
-            <div>
+          <div className="container">
+            <div className="row">
               {data.getUserItems.items.map((item) => {
                 return (
                   <div id="searchitem">
@@ -58,12 +76,16 @@ function UserProfile() {
                   </div>
                 );
               })}
-            </div>
-            
           </div>
+
+          </div>
+
+          
+
         </div>
       </div>
-      //{" "}
+      //{" "} 
+      </div>
     </>
   );
 }
