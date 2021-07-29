@@ -21,7 +21,19 @@ export const GET_ITEMS = gql`
 	}
 `;
 
-	export const USER_ITEMS = gql`
+export const SEARCH_ITEMS = gql`
+	query getSearchItems {
+		items {
+			_id
+			title
+			description
+			imageURL
+			price
+		}
+	}
+`;
+
+export const USER_ITEMS = gql`
 	query getUserItems($userId: ID!)
 	{
 		getUserItems(_id: $userId) {
