@@ -41,6 +41,7 @@ const typeDefs = gql`
   type Query {
     categories: [Category]!
     items: [Item]!
+	 getSearchItems(searchCriteria: String!): [Item]!
     leagues: [League]!
     league(leagueId: ID!): League
     leagueByInitials(initials: String!): League
