@@ -9,6 +9,30 @@ export const CAROUSEL_ITEMS = gql`
   }
 `;
 
+export const GET_ITEMS = gql`
+	query items {
+		items {
+			_id
+			title
+			description
+			imageURL
+			price
+		}
+	}
+`;
+
+export const SEARCH_ITEMS = gql`
+	query getSearchItems($searchCriteria: String!) {
+		getSearchItems(searchCriteria: $searchCriteria) {
+			_id
+			title
+			description
+			imageURL
+			price
+		}
+	}
+`;
+
 export const USER_ITEMS = gql`
   query getUserItems($userId: ID!) {
     getUserItems(userId: $userId) {
@@ -26,6 +50,7 @@ export const USER_ITEMS = gql`
       }
     }
 `;
+
 
 export const ITEMS_SOUNDEX = gql`
   query getItemsByPlayerSoundex($playerSoundex: String!) {

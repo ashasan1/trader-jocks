@@ -3,6 +3,7 @@ const { Category, Item, League, Team, User } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 var mongoose = require('mongoose');
+const { soundex } = require('../utils/soundex');
 
 
 const resolvers = {
@@ -13,6 +14,13 @@ const resolvers = {
 
 		items: async () => {
 			return Item.find().sort({ title: 1 });
+		},
+
+		getSearchItems: async (parent, { searchCriteria }) => {
+			console.log(searchCriteria);
+			const searchSoundex = soundex(searchCriteria);
+			console.log(searchSoundex);
+			return Item.find({ playerSoundex: searchSoundex }).sort({ createdAt: -1 });
 		},
 
 		leagues: async () => {
