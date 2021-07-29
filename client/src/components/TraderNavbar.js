@@ -20,25 +20,16 @@ function TraderNavbar() {
 					<div className="col-md">
 						<Navbar id="tradernavbar" expand="lg">
 							<Container>
-								<Navbar.Brand id="navtext" className="navtext" href="#home">Trader Jocks</Navbar.Brand>
 								<Navbar.Toggle aria-controls="basic-navbar-nav" />
 								<Navbar.Collapse id="basic-navbar-nav">
 									<Nav className="me-auto">
-									<Nav.Link id="navtext" href="#home">Home</Nav.Link>
-									<Form className="d-flex">
-										<FormControl
-										id="navsearchbar"
-										type="search"
-										placeholder="Search Player Name"
-										className="mr-2"
-										aria-label="Search"
-										/>
-										<Button id="searchbutton" variant="outline-success">Search</Button>
-										</Form>
+									<Nav.Link id="navtext" href="/">Home</Nav.Link>
 									
 										
 										{Auth.loggedIn() ? (
 											<>
+												
+												<Nav.Link id="navtext" href="/profile">Profile</Nav.Link>
 												<Nav.Link onClick={Auth.logout} id="navtext">Logout</Nav.Link>
 											</>
 										) : (
