@@ -5,6 +5,7 @@ const typeDefs = gql`
     _id: ID
     name: String
   }
+
   type Item {
 		_id: ID
 		title: String
