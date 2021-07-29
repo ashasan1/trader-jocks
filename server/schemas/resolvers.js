@@ -3,7 +3,7 @@ const { Category, Item, League, Team, User } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 var mongoose = require('mongoose');
-import soundex from '../utils/soundex';
+const { soundex } = require('../utils/soundex');
 
 
 const resolvers = {
