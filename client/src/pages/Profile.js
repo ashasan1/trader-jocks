@@ -69,7 +69,7 @@ function UserProfile() {
               {data.getUserItems.items.map((item) => {
                 return (
                   <div id="searchitem">
-                    <img style={{ width: "200px" }} src={item.imageURL} />
+                    <img id="searchitemimage" style={{ width: "200px" }} src={item.imageURL} />
                     <p id="searchitemdescription">{item.playerName}</p>
                     <p id="searchitemdescription">{item.description}</p>
                     <p id="searchitemdescription">Price: {item.price}</p>

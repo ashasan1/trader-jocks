@@ -125,21 +125,20 @@ P {
 }
 
 #searchitem {
-  background-color: rgba(255, 255, 255, 0.719);
+  background-color: rgba(0, 0, 0, 0.822);
   border-radius: 10px;
   padding: 20px;
   margin: 15px;
-  max-width: 20%;
-  border-color: red;
+  max-width: 30%;
+  border-color: rgb(255, 255, 255);
   border-style: solid;
 
 }
 
 #searchitemimage {
-  max-width: 5px;
-  max-height: 5px;
+  max-width: 350px;
   margin: 10px;
-  border-color: red;
+  border-color: rgb(255, 255, 255);
   border-style: solid;
   border-radius: 10px;
 }
@@ -149,12 +148,13 @@ P {
 }
 
 #searchitemdescription {
-color: black;
+color: rgb(255, 255, 255);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .carouseldiv {
   margin: 60px;
-  margin-left: 370px;
+  margin-left: 320px;
   max-width: 600px;
 }
 
