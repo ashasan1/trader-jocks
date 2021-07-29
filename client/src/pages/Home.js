@@ -11,6 +11,7 @@ function Home() {
 
 	const handleSearch = async (event) => {
 		event.preventDefault();
+		event.stopPropagation();
 		console.log(event.target.searchInput.value);
 		setSearchCriteria(event.target.searchInput.value);
 	}
@@ -30,7 +31,7 @@ function Home() {
 					</Form.Row>
 				</Form>
 			</Container>
-			{ (searchCriteria) ? <SearchResults searchTerm="{searchCriteria}" /> : <ItemCarousel /> }
+			{ (searchCriteria) ? <SearchResults searchTerm={searchCriteria} /> : <ItemCarousel /> }
 		</>
 	);
 }

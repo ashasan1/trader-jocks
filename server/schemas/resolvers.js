@@ -17,7 +17,9 @@ const resolvers = {
 		},
 
 		getSearchItems: async (parent, { searchCriteria }) => {
+			console.log(searchCriteria);
 			const searchSoundex = soundex(searchCriteria);
+			console.log(searchSoundex);
 			return Item.find({ playerSoundex: searchSoundex }).sort({ createdAt: -1 });
 		},
 
