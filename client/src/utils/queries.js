@@ -22,8 +22,8 @@ export const GET_ITEMS = gql`
 `;
 
 export const SEARCH_ITEMS = gql`
-	query getSearchItems {
-		items {
+	query getSearchItems($searchCriteria: String!) {
+		items(searchCriteria: $searchCriteria) {
 			_id
 			title
 			description
