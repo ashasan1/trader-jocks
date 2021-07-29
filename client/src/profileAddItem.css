@@ -116,3 +116,11 @@ border-style: solid;
     color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
+
+#submitbtn {
+    color: white;
+    background-color: black;
+    margin: 10px;
+    border-color: white;
+    border-style: solid;
+}
